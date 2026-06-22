@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- COMPLETE SEO META TAGS SETUP -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RZ Commerce | Premium Glutawol Skincare & Beauty Products Pakistan</title>
+    
+    <meta name="description" content="Shop 100% authentic Glutawol Skincare at RZ Commerce. Discover Glutawol Face Wash, Brightening Serum, Cream, and Soap crafted with Glutathione for a radiant, glowing complexion. Fast delivery across Pakistan.">
+    <meta name="keywords" content="Glutawol, Glutawol Face Wash, Glutawol Serum, Glutawol Cream, Glutawol Soap, Glutawol Pakistan, RZ Commerce, Glutathione Skincare, Skin Brightening, Glow Skincare Multan">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="RZ Commerce">
+    <link rel="canonical" href="https://rzcommerce.com">
+
+    <!-- OPEN GRAPH / FACEBOOK / WHATSAPP PREVIEW SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rzcommerce.com">
+    <meta property="og:title" content="RZ Commerce | Premium Glutawol Skincare & Beauty Collection">
+    <meta property="og:description" content="Get glowing skin with the ultimate Glutawol collection. Authentic whitening deep cleansing formulas, serums, and complete bundles available now.">
+    <meta property="og:image" content="Images/glutawol-skincare-banner.jpg">
+
+    <!-- TWITTER CARDS SEO -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rzcommerce.com">
+    <meta property="twitter:title" content="RZ Commerce | Premium Glutawol Skincare">
+    <meta property="twitter:description" content="Shop authentic Glutawol skincare products directly online or order via WhatsApp for quick delivery across Pakistan.">
+    <meta property="twitter:image" content="Images/glutawol-skincare-banner.jpg">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { 
+            --black:#0a0a0a; 
+            --black2:#111111; 
+            --black3:#1a1a1a; 
+            --black4:#222222; 
+            --gold:#c9a84c; 
+            --gold2:#e8c97a; 
+            --gold3:#f5e0a0; 
+            --gold-dark:#9a7a2e; 
+            --white:#ffffff; 
+            --cream:#f5f0e8; 
+            --gray:#888888; 
+            --border:rgba(201,168,76,0.2); 
+            --grad-gold:linear-gradient(135deg,#9a7a2e,#c9a84c,#e8c97a,#c9a84c,#9a7a2e); 
+            --grad-gold2:linear-gradient(90deg,#c9a84c,#e8c97a); 
+            --shadow-lg:0 20px 60px rgba(0,0,0,0.5); 
+        } 
+        * {margin:0;padding:0;box-sizing:border-box;} 
+        html {scroll-behavior:smooth;} 
+        body {font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;} 
+        ::-webkit-scrollbar {width:4px;} 
+        ::-webkit-scrollbar-track {background:var(--black);} 
+        ::-webkit-scrollbar-thumb {background:var(--gold);border-radius:2px;} 
+
+        .reveal {opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}
+        .reveal.visible {opacity:1;transform:translateY(0);}
+
+        /* NAVBAR */
+        nav {position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+        .nav-logo img {height:50px;object-fit:contain;}
+        .nav-logo-fallback {font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:none;}
+        .nav-links {display:flex;gap:2rem;}
+        .nav-links a {color:var(--gray);font-size:0.8rem;font-weight:500;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
+        .nav-links a:hover {color:var(--gold);}
+        .nav-cart {display:flex;align-items:center;gap:8px;background:var(--grad-gold2);color:var(--black);padding:10px 22px;border-radius:4px;font-size:0.78rem;font-weight:800;cursor:pointer;border:none;position:relative;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s;}
+        .nav-cart:hover {opacity:0.88;}
+        .cart-count {position:absolute;top:-7px;right:-7px;background:var(--white);color:var(--black);width:20px;height:20px;border-radius:50%;font-size:0.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;}
+
+        /* HERO */
+        #home {min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;}
+        .hero-banner {position:absolute;inset:0;background:var(--black);}
+        .hero-banner img {width:100%;height:100%;object-fit:cover;opacity:0.8;}
+        .hero-overlay {position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.88) 45%,rgba(0,0,0,0.15) 100%);}
+        .hero-content {position:relative;z-index:2;padding:140px 6% 80px;max-width:600px;}
+        .hero-tag {display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold);font-size:0.7rem;font-weight:600;padding:7px 18px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}
+        .hero-title {font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;line-height:1.05;color:var(--white);margin-bottom:1rem;}
+        .hero-title .gold {background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;}
+        .hero-sub {font-size:0.95rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:2rem;max-width:420px;}
+        .hero-badges {display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+        .hero-badge-item {display:flex;align-items:center;gap:6px;font-size:0.75rem;color:rgba(255,255,255,0.65);}
+        .hero-badge-item span {color:var(--gold);}
+        .hero-btns {display:flex;gap:1rem;flex-wrap:wrap;}
+        .btn-gold {background:var(--grad-gold2);color:var(--black);padding:14px 30px;font-size:0.82rem;font-weight:800;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s,transform 0.2s;box-shadow:0 4px 25px rgba(201,168,76,0.35);}
+        .btn-gold:hover {opacity:0.88;transform:translateY(-2px);}
+        .btn-outline-gold {background:transparent;color:var(--gold);border:1px solid var(--gold);padding:14px 30px;font-size:0.82rem;font-weight:600;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;}
+        .btn-outline-gold:hover {background:var(--gold);color:var(--black);transform:translateY(-2px);}
+
+        /* TRUST BAR */
+        .trust-bar {background:var(--black3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 6%;display:flex;justify-content:space-around;flex-wrap:wrap;gap:1rem;}
+        .trust-item {display:flex;align-items:center;gap:10px;}
+        .trust-icon {font-size:1.1rem;color:var(--gold);}
+        .trust-text {font-size:0.75rem;color:rgba(255,255,255,0.65);letter-spacing:0.08em;text-transform:uppercase;font-weight:500;}
+
+        /* SECTIONS */
+        section {padding:100px 6%;}
+        .sec-tag {font-size:0.68rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:10px;}
+        .sec-tag::before,.sec-tag::after {content:'';flex:1;max-width:40px;height:1px;background:var(--gold);opacity:0.4;}
+        .sec-title {font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:0.8rem;line-height:1.2;}
+        .sec-title span {background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .sec-sub {color:var(--gray);font-size:0.92rem;max-width:500px;line-height:1.8;margin-bottom:3rem;}
+        .sec-header {text-align:center;}
+        .sec-header .sec-tag {justify-content:center;}
+        .sec-header .sec-sub {margin:0 auto 3rem;}
+
+        /* PRODUCTS */
+        #products {background:var(--black2);}
+        .filter-tabs {display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:3rem;justify-content:center;}
+        .filter-btn {padding:8px 20px;font-size:0.72rem;font-weight:600;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--gray);letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;}
+        .filter-btn.active,.filter-btn:hover {background:var(--gold);color:var(--black);border-color:var(--gold);}
+        .products-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2px;}
+
+        /* PRODUCT CARD */
+        .prod-card {background:var(--black3);border:1px solid var(--border);transition:border-color 0.3s,transform 0.3s;position:relative;}
+        .prod-card:hover {border-color:var(--gold);transform:translateY(-4px);}
+        .prod-badge {position:absolute;top:14px;left:14px;z-index:2;background:var(--grad-gold2);color:var(--black);font-size:0.62rem;font-weight:800;padding:5px 14px;letter-spacing:0.1em;text-transform:uppercase;}
+
+        /* GALLERY */
+        .prod-main-img {width:100%;height:270px;background:var(--black4);overflow:hidden;position:relative;cursor:zoom-in;}
+        .prod-main-img img {width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+        .prod-card:hover .prod-main-img img {transform:scale(1.06);}
+        .prod-thumbs {display:flex;gap:3px;padding:6px;background:var(--black4);width:100%;overflow-x:auto;}
+        .prod-thumb {width:58px;height:58px;flex-shrink:0;border:2px solid transparent;cursor:pointer;overflow:hidden;transition:border-color 0.2s;background:var(--black3);}
+        .prod-thumb.active {border-color:var(--gold);}
+        .prod-thumb img {width:100%;height:100%;object-fit:cover;}
+        .prod-thumb:hover {border-color:var(--gold2);}
+        .prod-body {padding:1.4rem;}
+        .prod-category {font-size:0.65rem;color:var(--gold);font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;}
+        .prod-name {font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:700;color:var(--white);margin-bottom:0.25rem;}
+        .prod-subtitle {font-size:0.75rem;color:var(--gray);margin-bottom:0.8rem;font-style:italic;}
+        .prod-features {display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1rem;}
+        .prod-feature {background:rgba(201,168,76,0.08);border:1px solid var(--border);color:var(--gold2);font-size:0.62rem;padding:3px 9px;letter-spacing:0.05em;}
+        .prod-divider {height:1px;background:var(--border);margin-bottom:1rem;}
+        .prod-footer {display:flex;align-items:center;justify-content:space-between;}
+        .prod-price {font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .prod-price-sub {font-size:0.68rem;color:var(--gray);font-family:'Inter',sans-serif;}
+        .add-cart-btn {background:transparent;color:var(--gold);border:1px solid var(--gold);padding:9px 16px;font-size:0.72rem;font-weight:700;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;white-space:nowrap;}
+        .add-cart-btn:hover {background:var(--gold);color:var(--black);}
+
+        /* BUNDLE */
+        #bundle {background:var(--black);position:relative;overflow:hidden;}
+        #bundle::before {content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.05) 0%,transparent 70%);}
+        .bundle-wrap {display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;}
+        .bundle-img-wrap {border:1px solid var(--border);position:relative;}
+        .bundle-img-wrap::before {content:'';position:absolute;inset:-12px;border:1px solid rgba(201,168,76,0.08);pointer-events:none;}
+        .bundle-img-wrap img {width:100%;height:420px;object-fit:cover;display:block;}
+        .bundle-tag {font-size:0.68rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;font-weight:600;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
+        .bundle-tag::after {content:'';flex:1;height:1px;background:var(--border);}
+        .bundle-title {font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:var(--white);margin-bottom:1rem;line-height:1.1;}
+        .bundle-title span {background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .bundle-desc {color:var(--gray);font-size:0.88rem;line-height:1.8;margin-bottom:1.5rem;}
+        .bundle-items-grid {display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-bottom:2rem;}
+        .bundle-item {display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.75);}
+        .bundle-item::before {content:'✦';color:var(--gold);font-size:0.55rem;}
+        .bundle-price-row {display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;padding:1.5rem;border:1px solid var(--border);background:rgba(201,168,76,0.03);}
+        .bundle-old {font-size:1rem;color:var(--gray);text-decoration:line-through;}
+        .bundle-new {font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:800;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .bundle-save {background:var(--gold);color:var(--black);font-size:0.7rem;font-weight:800;padding:6px 14px;letter-spacing:0.08em;}
+        .bundle-btns {display:flex;gap:1rem;flex-wrap:wrap;}
+        .btn-wa {background:#25D366;color:var(--white);padding:14px 26px;font-size:0.8rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s,transform 0.2s;}
+        .btn-wa:hover {opacity:0.9;transform:translateY(-2px);}
+
+        /* WHY */
+        #why {background:var(--black2);}
+        .why-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;margin-top:3rem;}
+        .why-card {background:var(--black3);padding:2.5rem 1.8rem;border:1px solid var(--border);text-align:center;transition:border-color 0.2s,background 0.2s;}
+        .why-card:hover {border-color:var(--gold);background:rgba(201,168,76,0.03);}
+        .why-icon {font-size:2rem;margin-bottom:1rem;}
+        .why-title {font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;}
+        .why-desc {font-size:0.8rem;color:var(--gray);line-height:1.7;}
+
+        /* REVIEWS */
+        #reviews {background:var(--black);}
+        .reviews-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1px;}
+        .review-card {background:var(--black3);border:1px solid var(--border);padding:2rem;transition:border-color 0.2s;}
+        .review-card:hover {border-color:var(--gold);}
+        .review-stars {color:var(--gold);font-size:0.85rem;letter-spacing:2px;margin-bottom:1rem;}
+        .review-text {font-size:0.86rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:1.5rem;font-style:italic;}
+        .review-divider {height:1px;background:var(--border);margin-bottom:1.5rem;}
+        .review-author {display:flex;align-items:center;gap:1rem;}
+        .review-avatar {width:40px;height:40px;border-radius:50%;background:var(--grad-gold2);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--black);flex-shrink:0;}
+        .review-name {font-weight:600;font-size:0.86rem;color:var(--white);}
+        .review-loc {font-size:0.72rem;color:var(--gold);margin-top:2px;}
+
+        /* CONTACT */
+        #contact {background:var(--black2);}
+        .contact-wrap {display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;}
+        .contact-info {display:flex;flex-direction:column;gap:1rem;margin-top:1rem;}
+        .contact-item {display:flex;align-items:center;gap:1.2rem;padding:1.2rem;border:1px solid var(--border);transition:border-color 0.2s;}
+        .contact-item:hover {border-color:var(--gold);}
+        .contact-icon {width:42px;height:42px;background:rgba(201,168,76,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+        .contact-label {font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;}
+        .contact-val {font-size:0.88rem;color:var(--white);font-weight:500;margin-top:2px;}
+        .order-form-wrap {background:var(--black3);border:1px solid var(--border);padding:2.5rem;}
+        .order-form-title {font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.4rem;}
+        .order-form-sub {font-size:0.8rem;color:var(--gray);margin-bottom:2rem;}
+        .form-group {display:flex;flex-direction:column;gap:6px;margin-bottom:1.1rem;}
+        .form-group label {font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;}
+        .form-group input,.form-group select,.form-group textarea {background:var(--black4);border:1px solid var(--border);padding:12px 15px;color:var(--white);font-size:0.86rem;font-family:'Inter',sans-serif;transition:border-color 0.2s;outline:none;}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus {border-color:var(--gold);}
+        .form-group input::placeholder,.form-group textarea::placeholder {color:rgba(255,255,255,0.22);}
+        .form-group select option {background:var(--black3);}
+        .form-row {display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+        .order-submit {width:100%;background:var(--grad-gold2);color:var(--black);border:none;padding:15px;font-size:0.82rem;font-weight:800;cursor:pointer;letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity 0.2s;}
+        .order-submit:hover {opacity:0.88;}
+        .form-success {display:none;text-align:center;padding:1rem;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);color:#4ade80;font-size:0.84rem;margin-top:1rem;}
+
+        /* CART DRAWERS & OVERLAYS */
+        .cart-overlay {position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1999;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+        .cart-overlay.open {opacity:1;pointer-events:all;}
+        .cart-drawer {position:fixed;top:0;right:-440px;width:420px;height:100vh;background:var(--black2);z-index:2000;transition:right 0.35s ease;box-shadow:-10px 0 60px rgba(0,0,0,0.8);display:flex;flex-direction:column;border-left:1px solid var(--border);}
+        .cart-drawer.open {right:0;}
+        .cart-header {display:flex;justify-content:space-between;align-items:center;padding:1.5rem 2rem;border-bottom:1px solid var(--border);flex-shrink:0;}
+        .cart-title {font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--white);}
+        .cart-close {background:none;border:1px solid var(--border);width:34px;height:34px;cursor:pointer;color:var(--gray);font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+        .cart-close:hover {border-color:var(--gold);color:var(--gold);}
+        .cart-items {flex:1;padding:1.5rem 2rem;overflow-y:auto;}
+        .cart-empty {text-align:center;padding:4rem 0;color:var(--gray);}
+        .cart-empty-icon {font-size:2.5rem;margin-bottom:1rem;opacity:0.35;}
+        .cart-item {display:flex;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+        .cart-item-img {width:65px;height:65px;background:var(--black3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;overflow:hidden;}
+        .cart-item-img img {width:100%;height:100%;object-fit:cover;}
+        .cart-item-info {flex:1;}
+        .cart-item-name {font-weight:600;font-size:0.86rem;color:var(--white);margin-bottom:4px;}
+        .cart-item-price {color:var(--gold);font-weight:700;font-size:0.82rem;margin-bottom:10px;}
+        .cart-item-qty {display:flex;align-items:center;gap:10px;}
+        .qty-btn {width:26px;height:26px;border:1px solid var(--border);background:transparent;cursor:pointer;color:var(--white);font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+        .qty-btn:hover {border-color:var(--gold);color:var(--gold);}
+        .qty-num {font-weight:600;font-size:0.86rem;min-width:22px;text-align:center;}
+        .cart-remove {background:none;border:none;color:rgba(255,255,255,0.25);cursor:pointer;font-size:0.9rem;padding:4px;transition:color 0.2s;}
+        .cart-remove:hover {color:#ef4444;}
+        .cart-footer {padding:1.5rem 2rem;border-top:1px solid var(--border);flex-shrink:0;background:var(--black3);}
+        .cart-total-row {display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;}
+        .cart-total-label {font-size:0.72rem;color:var(--gray);letter-spacing:0.1em;text-transform:uppercase;}
+        .cart-total-amount {font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .checkout-btn {width:100%;background:#25D366;color:var(--white);border:none;padding:15px;font-size:0.82rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;letter-spacing:0.1em;text-transform:uppercase;transition:opacity 0.2s;}
+        .checkout-btn:hover {opacity:0.9;}
+
+        /* FOOTER */
+        footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 6% 2rem;}
+        .footer-top {display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;margin-bottom:3rem;}
+        .footer-logo img {height:55px;margin-bottom:1rem;object-fit:contain;}
+        .footer-logo-fallback {font-family:'Playfair Display',serif;font-size:1.6rem;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;display:none;}
+        .footer-desc {font-size:0.8rem;color:var(--gray);line-height:1.8;max-width:260px;}
+        .footer-col-title {font-size:0.68rem;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;font-weight:600;margin-bottom:1.2rem;}
+        .footer-links {display:flex;flex-direction:column;gap:0.7rem;}
+        .footer-links a {font-size:0.8rem;color:var(--gray);text-decoration:none;transition:color 0.2s;}
+        .footer-links a:hover {color:var(--gold);}
+        .footer-contact-list {display:flex;flex-direction:column;gap:0.7rem;}
+        .footer-contact-item {font-size:0.8rem;color:var(--gray);display:flex;align-items:center;gap:8px;}
+        .footer-contact-item span {color:var(--gold);}
+        .footer-bottom {border-top:1px solid var(--border);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+        .footer-copy {font-size:0.76rem;color:var(--gray);}
+        .footer-copy b {color:var(--gold);}
+        .footer-thanks {font-size:0.76rem;color:var(--gray);font-style:italic;}
+
+        /* TOAST */
+        .toast {position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--black3);color:var(--white);padding:13px 26px;font-size:0.82rem;font-weight:500;box-shadow:var(--shadow-lg);z-index:9999;opacity:0;transition:all 0.3s;border-bottom:2px solid var(--gold);white-space:nowrap;}
+        .toast.show {transform:translateX(-50%) translateY(0);opacity:1;}
+
+        @media(max-width:900px){
+            .bundle-wrap {grid-template-columns:1fr;gap:3rem;}
+            .contact-wrap {grid-template-columns:1fr;gap:3rem;}
+            .footer-top {grid-template-columns:1fr 1fr;}
+        }
+        @media(max-width:600px){
+            .nav-links {display:none;}
+            section {padding:70px 5%;}
+            .cart-drawer {width:100%;right:-100%;}
+            .hero-title {font-size:2.5rem;}
+            .form-row {grid-template-columns:1fr;}
+            .footer-top {grid-template-columns:1fr;gap:2rem;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CART SIDE DRAWER -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <div class="cart-title">Your Selection</div>
+            <button class="cart-close" onclick="toggleCart(false)">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <small style="color:var(--gold);font-size:0.75rem;">Add products to get started</small>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total-row">
+                <span class="cart-total-label">Total Amount</span>
+                <span class="cart-total-amount" id="cartTotal">Rs. 0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkoutWhatsApp()">
+                <span>💬 Order via WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- NAVIGATION HEADER -->
+    <nav>
+        <div class="nav-logo">
+            <img src="Images/rz-commerce-logo.png" alt="RZ Commerce Logo">
+            <div class="nav-logo-fallback">RZ Commerce</div>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#bundle">Bundle</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="nav-cart" onclick="toggleCart(true)">
+            <span>🛒 Cart</span>
+            <div class="cart-count" id="cartCount">0</div>
+        </button>
+    </nav>
+
+    <!-- HERO BACKGROUND SECTION -->
+    <section id="home">
+        <div class="hero-banner">
+            <img src="Images/glutawol-skincare-banner.jpg" alt="Glutawol Skincare Campaign Banner">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-tag">✦ Premium Skincare Collection</div>
+            <h1 class="hero-title">Reveal Your<br><span class="gold">Natural Glow</span></h1>
+            <p class="hero-sub">Premium Glutawol skincare — crafted with Glutathione for brighter, healthier, and radiant skin across all skin types.</p>
+            <div class="hero-badges">
+                <div class="hero-badge-item"><span>✦</span> Brightening Formula</div>
+                <div class="hero-badge-item"><span>✦</span> Safe & Effective</div>
+                <div class="hero-badge-item"><span>✦</span> All Skin Types</div>
+            </div>
+            <div class="hero-btns">
+                <a href="#products" class="btn-gold">✨ Shop Now</a>
+                <a href="https://wa.me/923207895540" target="_blank" class="btn-outline-gold">💬 WhatsApp Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SECTIONS STRIP -->
+    <div class="trust-bar">
+        <div class="trust-item"><span class="trust-icon">🛡️</span><span class="trust-text">100% Authentic</span></div>
+        <div class="trust-item"><span class="trust-icon">🚚</span><span class="trust-text">Fast Delivery</span></div>
+        <div class="trust-item"><span class="trust-icon">⭐</span><span class="trust-text">Trusted Brand</span></div>
+        <div class="trust-item"><span class="trust-icon">↩️</span><span class="trust-text">Easy Returns</span></div>
+        <div class="trust-item"><span class="trust-icon">💬</span><span class="trust-text">24/7 Support</span></div>
+    </div>
+
+    <!-- MAIN PRODUCT CATALOGUE GRID -->
+    <section id="products">
+        <div class="sec-header">
+            <div class="sec-tag">Our Collection</div>
+            <h2 class="sec-title">Glutawol <span>Products</span></h2>
+            <p class="sec-sub">Each product is expertly engineered with rich Glutathione blends to brighten, refresh, and repair your skin complexion.</p>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+            <button class="filter-btn" onclick="filterProducts('cleanser', this)">Cleansers</button>
+            <button class="filter-btn" onclick="filterProducts('treatment', this)">Treatments</button>
+            <button class="filter-btn" onclick="filterProducts('moisturizer', this)">Moisturizers</button>
+        </div>
+
+        <div class="products-grid">
+            <!-- PRODUCT 1: FACE WASH -->
+            <div class="prod-card reveal" data-category="cleanser">
+                <div class="prod-badge">Bestseller</div>
+                <div class="prod-main-img">
+                    <img id="fw-main" src="Images/glutawol-face-wash.jpg" alt="Glutawol Face Wash Main View" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:270px;font-size:4rem\'>🧴</div>'">
+                </div>
+                <div class="prod-thumbs">
+                    <div class="prod-thumb active" onclick="changeImg('fw-main','Images/glutawol-face-wash.jpg',this)"><img src="Images/glutawol-face-wash.jpg" alt="Glutawol Face Wash Front"></div>
+                    <div class="prod-thumb" onclick="changeImg('fw-main','Images/glutawol-face-wash-side.jpg',this)"><img src="Images/glutawol-face-wash-side.jpg" alt="Glutawol Face Wash Side"></div>
+                    <div class="prod-thumb" onclick="changeImg('fw-main','Images/glutawol-face-wash-packaging.jpg',this)"><img src="Images/glutawol-face-wash-packaging.jpg" alt="Glutawol Face Wash Box"></div>
+                </div>
+                <div class="prod-body">
+                    <div class="prod-category">Cleanser</div>
+                    <h3 class="prod-name">Glutawol Face Wash</h3>
+                    <div class="prod-subtitle">Whitening Deep Cleansing Formula</div>
+                    <div class="prod-features"><span class="prod-feature">Brighten</span><span class="prod-feature">Refresh</span><span class="prod-feature">Revive</span></div>
+                    <div class="prod-divider"></div>
+                    <div class="prod-footer">
+                        <div><div class="prod-price">Rs. 1,500</div><div class="prod-price-sub">per piece</div></div>
+                        <button class="add-cart-btn" onclick="addToCart('Glutawol Face Wash',1500,'Images/glutawol-face-wash.jpg','🧴')">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2: SERUM -->
+            <div class="prod-card reveal" data-category="treatment">
+                <div class="prod-badge" style="background:linear-gradient(90deg,#b8860b,#daa520)">⭐ Top Pick</div>
+                <div class="prod-main-img">
+                    <img id="sr-main" src="Images/glutawol-serum.jpg" alt="Glutawol Serum Main View" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:270px;font-size:4rem\'>💧</div>'">
+                </div>
+                <div class="prod-thumbs">
+                    <div class="prod-thumb active" onclick="changeImg('sr-main','Images/glutawol-serum.jpg',this)"><img src="Images/glutawol-serum.jpg" alt="Glutawol Serum Front"></div>
+                    <div class="prod-thumb" onclick="changeImg('sr-main','Images/glutawol-serum-side.jpg',this)"><img src="Images/glutawol-serum-side.jpg" alt="Glutawol Serum Side"></div>
+                    <div class="prod-thumb" onclick="changeImg('sr-main','Images/glutawol-serum-packaging.jpg',this)"><img src="Images/glutawol-serum-packaging.jpg" alt="Glutawol Serum Box"></div>
+                </div>
+                <div class="prod-body">
+                    <div class="prod-category">Treatment</div>
+                    <h3 class="prod-name">Glutawol Serum</h3>
+                    <div class="prod-subtitle">Whitening Brightening Serum</div>
+                    <div class="prod-features"><span class="prod-feature">Brighten</span><span class="prod-feature">Hydrate</span><span class="prod-feature">Repair</span></div>
+                    <div class="prod-divider"></div>
+                    <div class="prod-footer">
+                        <div><div class="prod-price">Rs. 3,500</div><div class="prod-price-sub">per piece</div></div>
+                        <button class="add-cart-btn" onclick="addToCart('Glutawol Serum',3500,'Images/glutawol-serum.jpg','💧')">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3: CREAM -->
+            <div class="prod-card reveal" data-category="moisturizer">
+                <div class="prod-main-img">
+                    <img id="cr-main" src="Images/glutawol-cream.jpg" alt="Glutawol Cream Main View" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:270px;font-size:4rem\'>🍶</div>'">
+                </div>
+                <div class="prod-thumbs">
+                    <div class="prod-thumb active" onclick="changeImg('cr-main','Images/glutawol-cream.jpg',this)"><img src="Images/glutawol-cream.jpg" alt="Glutawol Cream Front"></div>
+                    <div class="prod-thumb" onclick="changeImg('cr-main','Images/glutawol-cream-side.jpg',this)"><img src="Images/glutawol-cream-side.jpg" alt="Glutawol Cream Side"></div>
+                    <div class="prod-thumb" onclick="changeImg('cr-main','Images/glutawol-cream-packaging.jpg',this)"><img src="Images/glutawol-cream-packaging.jpg" alt="Glutawol Cream Box"></div>
+                </div>
+                <div class="prod-body">
+                    <div class="prod-category">Moisturizer</div>
+                    <h3 class="prod-name">Glutawol Cream</h3>
+                    <div class="prod-subtitle">Whitening Daily Moisturizing Care</div>
+                    <div class="prod-features"><span class="prod-feature">Brighten</span><span class="prod-feature">Moisturize</span><span class="prod-feature">Protect</span></div>
+                    <div class="prod-divider"></div>
+                    <div class="prod-footer">
+                        <div><div class="prod-price">Rs. 1,200</div><div class="prod-price-sub">per piece</div></div>
+                        <button class="add-cart-btn" onclick="addToCart('Glutawol Cream',1200,'Images/glutawol-cream.jpg','🍶')">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 4: SOAP -->
+            <div class="prod-card reveal" data-category="cleanser">
+                <div class="prod-main-img">
+                    <img id="sp-main" src="Images/glutawol-soap.jpg" alt="Glutawol Soap Main View" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:270px;font-size:4rem\'>🧼</div>'">
+                </div>
+                <div class="prod-thumbs">
+                    <div class="prod-thumb active" onclick="changeImg('sp-main','Images/glutawol-soap.jpg',this)"><img src="Images/glutawol-soap.jpg" alt="Glutawol Soap Front"></div>
+                    <div class="prod-thumb" onclick="changeImg('sp-main','Images/glutawol-soap-side.jpg',this)"><img src="Images/glutawol-soap-side.jpg" alt="Glutawol Soap Side"></div>
+                    <div class="prod-thumb" onclick="changeImg('sp-main','Images/glutawol-soap-packaging.jpg',this)"><img src="Images/glutawol-soap-packaging.jpg" alt="Glutawol Soap Box"></div>
+                </div>
+                <div class="prod-body">
+                    <div class="prod-category">Cleanser</div>
+                    <h3 class="prod-name">Glutawol Soap</h3>
+                    <div class="prod-subtitle">Whitening Gentle Skin Cleansing</div>
+                    <div class="prod-features"><span class="prod-feature">Brightening</span><span class="prod-feature">Nourishing</span><span class="prod-feature">Gentle</span></div>
+                    <div class="prod-divider"></div>
+                    <div class="prod-footer">
+                        <div><div class="prod-price">Rs. 1,200</div><div class="prod-price-sub">per piece</div></div>
+                        <button class="add-cart-btn" onclick="addToCart('Glutawol Soap',1200,'Images/glutawol-soap.jpg','🧼')">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUNDLE SPECIAL OFFER SECTION -->
+    <section id="bundle">
+        <div class="bundle-wrap">
+            <div class="bundle-img-wrap reveal">
+                <img src="Images/glutawol-skincare-bundle.jpg" alt="Complete Glutawol Skincare Bundle Offer Pack">
+            </div>
+            <div class="bundle-details reveal">
+                <div class="bundle-tag">✦ Special Offer</div>
+                <h2 class="bundle-title">Complete Glutawol<br><span>Bundle Pack</span></h2>
+                <p class="bundle-desc">Get the complete flawless skin architecture sequence at a highly competitive, special discounted price. Everything required to maintain healthy and glowing cells daily.</p>
+                <div class="bundle-items-grid">
+                    <div class="bundle-item">Glutawol Face Wash</div>
+                    <div class="bundle-item">Glutawol Serum</div>
+                    <div class="bundle-item">Glutawol Cream</div>
+                    <div class="bundle-item">Glutawol Soap</div>
+                </div>
+                <div class="bundle-price-row">
+                    <div class="bundle-old">Rs. 7,400</div>
+                    <div class="bundle-new">Rs. 6,700</div>
+                    <div class="bundle-save">Save Rs. 700</div>
+                </div>
+                <div class="bundle-btns">
+                    <button class="btn-gold" onclick="addToCart('Complete Bundle',6700,'Images/glutawol-skincare-bundle.jpg','🛍️')">🛒 Add to Cart</button>
+                    <a href="https://wa.me/923207895540?text=Hi!%20I%20want%20to%20order%20the%20Complete%20Glutawol%20Bundle%20Pack." target="_blank" class="btn-wa">💬 WhatsApp Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST ARCHITECTURE BLOCK -->
+    <section id="why">
+        <div class="sec-header">
+            <div class="sec-tag">Why Choose Us</div>
+            <h2 class="sec-title">The RZ Commerce <span>Promise</span></h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">✅</div>
+                <h3 class="why-title">100% Authentic</h3>
+                <p class="why-desc">All Glutawol products are premium, genuine and sourced directly from verified suppliers.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🚚</div>
+                <h3 class="why-title">Fast Delivery</h3>
+                <p class="why-desc">Quick and reliable shipping setups directly across Pakistan within 2-3 business days.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💬</div>
+                <h3 class="why-title">24/7 Support</h3>
+                <p class="why-desc">Always available on active digital pathways to answer product variations and guide orders.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💰</div>
+                <h3 class="why-title">Best Price</h3>
+                <p class="why-desc">Premium grade formulations provided at highly customized and competitive market indices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- USER REVIEWS SECTION -->
+    <section id="reviews">
+        <div class="sec-header">
+            <div class="sec-tag">Customer Reviews</div>
+            <h2 class="sec-title">What Our Customers <span>Say</span></h2>
+            <p class="sec-sub">Real reviews from our happy customers across Pakistan.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The Glutawol Serum is absolutely amazing! My skin has never looked this glowing. Highly recommended to everyone!"</p>
+                <div class="review-divider"></div>
+                <div class="review-author">
+                    <div class="review-avatar">A</div>
+                    <div>
+                        <div class="review-name">Ayesha Khan</div>
+                        <div class="review-loc">✦ Lahore</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Ordered the complete bundle and I am obsessed! Fast delivery and great packaging. Will definitely order again!"</p>
+                <div class="review-divider"></div>
+                <div class="review-author">
+                    <div class="review-avatar">S</div>
+                    <div>
+                        <div class="review-name">Sara Ahmed</div>
+                        <div class="review-loc">✦ Karachi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The face wash is so gentle and effective. My skin feels clean without dryness. Best skincare purchase ever!"</p>
+                <div class="review-divider"></div>
+                <div class="review-author">
+                    <div class="review-avatar">F</div>
+                    <div>
+                        <div class="review-name">Fatima Malik</div>
+                        <div class="review-loc">✦ Multan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHECKOUT INTERACTIVE LEAD CHANNEL -->
+    <section id="contact">
+        <div class="contact-wrap">
+            <div>
+                <div class="sec-tag">Get In Touch</div>
+                <h2 class="sec-title">Order <span>Today</span></h2>
+                <p class="sec-sub">Place your order via WhatsApp or fill the form — we will confirm within hours!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <div class="contact-label">WhatsApp</div>
+                            <div class="contact-val">0320-7895540</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-val">ramzanbalochmrbaloch@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <div class="contact-label">Location</div>
+                            <div class="contact-val">Multan, Pakistan</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="https://wa.me/923207895540" target="_blank" class="btn-wa" style="width:100%; justify-content:center;">💬 Order on WhatsApp Now</a>
+                </div>
+            </div>
+
+            <div class="order-form-wrap">
+                <h3 class="order-form-title">Place Your Order</h3>
+                <p class="order-form-sub">Fill the form and we will confirm your order shortly.</p>
+                
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="clientName">Your Name</label>
+                        <input type="text" id="clientName" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPhone">Phone Number</label>
+                        <input type="tel" id="clientPhone" name="phone" placeholder="e.g. 03001234567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientProduct">Select Product</label>
+                        <select id="clientProduct" name="product" required>
+                            <option value="" disabled selected>Choose a product...</option>
+                            <option value="Glutawol Face Wash — Rs. 1,500">Glutawol Face Wash — Rs. 1,500</option>
+                            <option value="Glutawol Serum — Rs. 3,500">Glutawol Serum — Rs. 3,500</option>
+                            <option value="Glutawol Cream — Rs. 1,200">Glutawol Cream — Rs. 1,200</option>
+                            <option value="Glutawol Soap — Rs. 1,200">Glutawol Soap — Rs. 1,200</option>
+                            <option value="Complete Bundle — Rs. 6,700">Complete Bundle — Rs. 6,700</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientAddress">Delivery Address</label>
+                        <textarea id="clientAddress" name="address" rows="3" placeholder="Enter full shipping address" required></textarea>
+                    </div>
+                    <button type="submit" class="order-submit">✦ Place Order Now</button>
+                    <div class="form-success" id="orderSuccess">🙏 Thank you for your order! We will contact you within 24 hours. ✅</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ARCHITECTURE -->
+    <footer>
+        <div class="footer-top">
+            <div>
+                <div class="footer-logo">
+                    <img src="Images/rz-commerce-logo.png" alt="RZ Commerce Footer Branding">
+                    <div class="footer-logo-fallback">RZ Commerce</div>
+                </div>
+                <p class="footer-desc">Premium Glutawol skincare — designed to help you feel fresh, confident and radiant every day. Glow With Confidence. ✨</p>
+            </div>
+            <div>
+                <div class="footer-col-title">Quick Links</div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#bundle">Bundle Offer</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact Us</div>
+                <div class="footer-contact-list">
+                    <div class="footer-contact-item"><span>📱</span> 0320-7895540</div>
+                    <div class="footer-contact-item"><span>📧</span> ramzanbalochmrbaloch@gmail.com</div>
+                    <div class="footer-contact-item"><span>📍</span> Multan, Pakistan</div>
+                    <div class="footer-contact-item"><span>🕐</span> Mon–Sat, 9am–9pm</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">&copy; 2026 <b>RZ Commerce</b> · All Rights Reserved</div>
+            <div class="footer-thanks">🙏 Thank you for shopping with us — your glow is our mission!</div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE FLOATING NOTIFICATIONS TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // SCROLL REVEAL ENGINE
+        const reveals = document.querySelectorAll('.reveal'); 
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if(e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, {threshold: 0.08}); 
+        reveals.forEach(el => obs.observe(el)); 
+
+        // DETAILED IMAGE THUMBNAIL GALLERY MANAGER
+        function changeImg(mainId, src, thumbEl) { 
+            document.getElementById(mainId).src = src; 
+            thumbEl.closest('.prod-thumbs').querySelectorAll('.prod-thumb').forEach(t => t.classList.remove('active')); 
+            thumbEl.classList.add('active'); 
+        } 
+
+        // OPERATIONAL CART MANAGEMENT MATRIX
+        let cart = []; 
+        function addToCart(name, price, img, emoji) { 
+            const ex = cart.find(i => i.name === name); 
+            if(ex) { ex.qty++; } else { cart.push({name, price, img, emoji, qty: 1}); } 
+            updateCart(); 
+            showToast('✦ ' + name + ' added to cart'); 
+            toggleCart(true); 
+        } 
+
+        function updateCart() { 
+            const count = cart.reduce((a, i) => a + i.qty, 0); 
+            document.getElementById('cartCount').textContent = count; 
+            const itemsEl = document.getElementById('cartItems'); 
+            const footerEl = document.getElementById('cartFooter'); 
+            
+            if(!cart.length) { 
+                itemsEl.innerHTML = '<div class="cart-empty"><div class="cart-empty-icon">🛒</div><p>Your cart is empty</p><small style="color:var(--gold);font-size:0.75rem;">Add products to get started</small></div>'; 
+                footerEl.style.display = 'none'; 
+                return; 
+            } 
+            
+            footerEl.style.display = 'block'; 
+            let total = 0; 
+            itemsEl.innerHTML = cart.map((item, idx) => { 
+                total += item.price * item.qty; 
+                return `<div class="cart-item"> 
+                    <div class="cart-item-img"><img src="${item.img}" onerror="this.style.display='none';this.parentElement.innerHTML='${item.emoji}'"/></div> 
+                    <div class="cart-item-info"> 
+                        <div class="cart-item-name">${item.name}</div> 
+                        <div class="cart-item-price">Rs. ${item.price.toLocaleString()}</div> 
+                        <div class="cart-item-qty"> 
+                            <button class="qty-btn" onclick="changeQty(${idx},-1)">−</button> 
+                            <span class="qty-num">${item.qty}</span> 
+                            <button class="qty-btn" onclick="changeQty(${idx},1)">+</button> 
+                        </div> 
+                    </div> 
+                    <button class="cart-remove" onclick="removeItem(${idx})">✕</button> 
+                </div>`; 
+            }).join(''); 
+            document.getElementById('cartTotal').textContent = 'Rs. ' + total.toLocaleString(); 
+        } 
+
+        function changeQty(idx, change) { 
+            cart[idx].qty += change; 
+            if(cart[idx].qty <= 0) cart.splice(idx, 1); 
+            updateCart(); 
+        } 
+
+        function removeItem(idx) { 
+            cart.splice(idx, 1); 
+            updateCart(); 
+        } 
+
+        function toggleCart(forceOpen) { 
+            const d = document.getElementById('cartDrawer'), o = document.getElementById('cartOverlay'); 
+            if(forceOpen === true || !d.classList.contains('open')) { 
+                d.classList.add('open'); o.classList.add('open'); 
+            } else { 
+                d.classList.remove('open'); o.classList.remove('open'); 
+            } 
+        } 
+
+        function checkoutWhatsApp() { 
+            if(!cart.length) return; 
+            let msg = 'Hi! I want to place an order:%0A%0A'; 
+            cart.forEach(i => { 
+                msg += `• ${i.name} x${i.qty} = Rs. ${(i.price*i.qty).toLocaleString()}%0A`; 
+            }); 
+            const total = cart.reduce((a, i) => a + i.price * i.qty, 0); 
+            msg += `%0ATotal: Rs. ${total.toLocaleString()}%0A%0APlease confirm my order!`; 
+            window.open('https://wa.me/923207895540?text=' + msg, '_blank'); 
+        } 
+
+        // FILTER CONTROL ENGINE
+        function filterProducts(cat, btn) { 
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); 
+            btn.classList.add('active'); 
+            document.querySelectorAll('.prod-card').forEach(card => { 
+                card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none'; 
+            }); 
+        } 
+
+        // TOAST ENGINE MANAGER
+        function showToast(msg) { 
+            const t = document.getElementById('toast'); 
+            t.textContent = msg; 
+            t.classList.add('show'); 
+            setTimeout(() => t.classList.remove('show'), 3000); 
+        } 
+
+        // SERVER SYNC SYSTEM (FORMSPREE Integration)
+        document.getElementById('orderForm').addEventListener('submit', async function(e) { 
+            e.preventDefault(); 
+            const btn = this.querySelector('.order-submit'); 
+            btn.textContent = 'Placing Order...'; btn.disabled = true; 
+            try { 
+                const res = await fetch('https://formspree.io/f/mlgyrvov', { 
+                    method: 'POST', 
+                    body: new FormData(this), 
+                    headers: {'Accept': 'application/json'} 
+                }); 
+                if(res.ok) { 
+                    document.getElementById('orderSuccess').style.display = 'block'; 
+                    this.reset(); 
+                    showToast('Order placed successfully!'); 
+                } 
+            } catch(err) {
+                showToast('Something went wrong. Please try again.');
+            } 
+            btn.textContent = '✦ Place Order Now'; btn.disabled = false; 
+        });
+    </script>
+</body>
+</html>
