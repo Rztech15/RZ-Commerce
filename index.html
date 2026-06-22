@@ -15,14 +15,14 @@
 <meta property="og:url" content="https://rzcommerce.com"> 
 <meta property="og:title" content="RZ Commerce | Premium Glutawol Skincare & Beauty Collection"> 
 <meta property="og:description" content="Get glowing skin with the ultimate Glutawol collection. Authentic whitening deep cleansing formulas, serums, and complete bundles available now."> 
-<meta property="og:image" content="Images/glutawol-skincare-banner.jpg"> 
+<meta property="og:image" content="rz commerce glutawol banner.jpeg"> 
 
 <!-- TWITTER CARDS SEO --> 
 <meta property="twitter:card" content="summary_large_image"> 
 <meta property="twitter:url" content="https://rzcommerce.com"> 
 <meta property="twitter:title" content="RZ Commerce | Premium Glutawol Skincare"> 
 <meta property="twitter:description" content="Shop authentic Glutawol skincare products directly online or order via WhatsApp for quick delivery across Pakistan."> 
-<meta property="twitter:image" content="Images/glutawol-skincare-banner.jpg"> 
+<meta property="twitter:image" content="rz commerce glutawol banner.jpeg"> 
 
 <!-- GOOGLE FONTS --> 
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -46,8 +46,7 @@
   --grad-gold:linear-gradient(135deg,#9a7a2e,#c9a84c,#e8c97a,#c9a84c,#9a7a2e); 
   --grad-gold2:linear-gradient(90deg,#c9a84c,#e8c97a); 
   --shadow-lg:0 20px 60px rgba(0,0,0,0.5); 
-} 
-* {margin:0;padding:0;box-sizing:border-box;} 
+} * {margin:0;padding:0;box-sizing:border-box;} 
 html {scroll-behavior:smooth;} 
 body {font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;} 
 ::-webkit-scrollbar {width:4px;} 
@@ -70,8 +69,8 @@ nav {position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:c
 /* HERO */ 
 #home {min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;} 
 .hero-banner {position:absolute;inset:0;background:var(--black);} 
-.hero-banner img {width:100%;height:100%;object-fit:cover;opacity:0.8;} 
-.hero-overlay {position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.88) 45%,rgba(0,0,0,0.15) 100%);} 
+.hero-banner img {width:100%;height:100%;object-fit:cover;opacity:0.4;} 
+.hero-overlay {position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.92) 45%,rgba(0,0,0,0.4) 100%);} 
 .hero-content {position:relative;z-index:2;padding:140px 6% 80px;max-width:600px;} 
 .hero-tag {display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold);font-size:0.7rem;font-weight:600;padding:7px 18px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;} 
 .hero-title {font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;line-height:1.05;color:var(--white);margin-bottom:1rem;} 
@@ -110,16 +109,16 @@ section {padding:100px 6%;}
 .filter-btn.active,.filter-btn:hover {background:var(--gold);color:var(--black);border-color:var(--gold);} 
 .products-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2px;} 
 
-/* PRODUCT CARD */ 
+/* PRODUCT CARD & IMAGE HOVER EFFECTS */ 
 .prod-card {background:var(--black3);border:1px solid var(--border);transition:border-color 0.3s,transform 0.3s;position:relative;} 
 .prod-card:hover {border-color:var(--gold);transform:translateY(-4px);} 
 .prod-badge {position:absolute;top:14px;left:14px;z-index:2;background:var(--grad-gold2);color:var(--black);font-size:0.62rem;font-weight:800;padding:5px 14px;letter-spacing:0.1em;text-transform:uppercase;} 
+.prod-main-img {width:100%;height:270px;background:var(--black4);overflow:hidden;position:relative;} 
+.prod-main-img img {width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;transition:opacity 0.4s ease,transform 0.5s ease;} 
+.prod-main-img img.img-hover {opacity:0;} 
+.prod-card:hover .prod-main-img img.img-primary {opacity:0;} 
+.prod-card:hover .prod-main-img img.img-hover {opacity:1;transform:scale(1.04);} 
 
-/* GALLERY */ 
-.prod-main-img {width:100%;height:270px;background:var(--black4);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;} 
-.prod-main-img img {width:100%;height:100%;object-fit:cover;transition:transform 0.5s;} 
-.prod-card:hover .prod-main-img img {transform:scale(1.06);} 
-.prod-thumbs {display:none;gap:3px;padding:6px;background:var(--black4);width:100%;overflow-x:auto;} 
 .prod-body {padding:1.4rem;} 
 .prod-category {font-size:0.65rem;color:var(--gold);font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;} 
 .prod-name {font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:700;color:var(--white);margin-bottom:0.25rem;} 
@@ -137,10 +136,9 @@ section {padding:100px 6%;}
 #bundle {background:var(--black);position:relative;overflow:hidden;} 
 #bundle::before {content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.05) 0%,transparent 70%);} 
 .bundle-wrap {display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;} 
-.bundle-img-wrap {border:1px solid var(--border);position:relative;} 
-.bundle-img-wrap::before {content:'';position:absolute;inset:-12px;border:1px solid rgba(201,168,76,0.08);pointer-events:none;} 
-.bundle-img-fallback {width:100%;height:380px;background:var(--black3);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:3.5rem;color:var(--gold);gap:10px;} 
-.bundle-img-fallback span {font-size:1rem;color:var(--white);font-weight:600;letter-spacing:1px;}
+.bundle-img-wrap {border:1px solid var(--border);position:relative;height:380px;background:var(--black3);overflow:hidden;} 
+.bundle-img-wrap img {width:100%;height:100%;object-fit:cover;transition:transform 0.5s;} 
+.bundle-img-wrap:hover img {transform:scale(1.04);} 
 .bundle-tag {font-size:0.68rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;font-weight:600;margin-bottom:1rem;display:flex;align-items:center;gap:10px;} 
 .bundle-tag::after {content:'';flex:1;height:1px;background:var(--border);} 
 .bundle-title {font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:var(--white);margin-bottom:1rem;line-height:1.1;} 
@@ -215,7 +213,8 @@ section {padding:100px 6%;}
 .cart-empty {text-align:center;padding:4rem 0;color:var(--gray);} 
 .cart-empty-icon {font-size:2.5rem;margin-bottom:1rem;opacity:0.35;} 
 .cart-item {display:flex;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--border);align-items:flex-start;} 
-.cart-item-img {width:65px;height:65px;background:var(--black3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;overflow:hidden;color:var(--gold);} 
+.cart-item-img {width:65px;height:65px;background:var(--black3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;} 
+.cart-item-img img {width:100%;height:100%;object-fit:cover;} 
 .cart-item-info {flex:1;} 
 .cart-item-name {font-weight:600;font-size:0.86rem;color:var(--white);margin-bottom:4px;} 
 .cart-item-price {color:var(--gold);font-weight:700;font-size:0.82rem;margin-bottom:10px;} 
@@ -298,7 +297,9 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
 <!-- NAVIGATION HEADER --> 
 <nav> 
   <div class="nav-logo"> 
-    <div class="nav-logo-fallback" style="display:block;">RZ COMMERCE</div> 
+    <!-- LOGO IMAGE ADDED -->
+    <img src="rz commerce logo.jpeg" alt="RZ Commerce Logo" onerror="this.style.display='none'; document.getElementById('fallbackLogo').style.display='block';">
+    <div class="nav-logo-fallback" id="fallbackLogo">RZ COMMERCE</div> 
   </div> 
   <div class="nav-links"> 
     <a href="#home">Home</a> 
@@ -315,7 +316,11 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
 
 <!-- HERO BACKGROUND SECTION --> 
 <section id="home"> 
-  <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(26,26,26,0.9) 100%);"></div> 
+  <div class="hero-banner">
+    <!-- HERO MAIN BANNER IMAGE ADDED -->
+    <img src="rz commerce glutawol banner.jpeg" alt="Glutawol Banner">
+  </div>
+  <div class="hero-overlay"></div> 
   <div class="hero-content"> 
     <div class="hero-tag">✦ Premium Skincare Collection</div> 
     <h1 class="hero-title">Reveal Your<br><span class="gold">Natural Glow</span></h1> 
@@ -356,10 +361,13 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
   </div> 
   <div class="products-grid"> 
     
-    <!-- PRODUCT 1: FACE WASH --> 
+    <!-- PRODUCT 1: FACE WASH (HOVER IMAGE ADDED) --> 
     <div class="prod-card reveal" data-category="cleanser"> 
       <div class="prod-badge">Bestseller</div> 
-      <div class="prod-main-img" style="font-size: 4.5rem;">🧴</div> 
+      <div class="prod-main-img">
+         <img src="glutawol facewash.jpeg" class="img-primary" alt="Glutawol Face Wash">
+         <img src="glutawol facewash side.jpeg" class="img-hover" alt="Glutawol Face Wash Side">
+      </div> 
       <div class="prod-body"> 
         <div class="prod-category">Cleanser</div> 
         <h3 class="prod-name">Glutawol Face Wash</h3> 
@@ -368,15 +376,18 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
         <div class="prod-divider"></div> 
         <div class="prod-footer"> 
           <div><div class="prod-price">Rs. 1,500</div><div class="prod-price-sub">per piece</div></div> 
-          <button class="add-cart-btn" onclick="addToCart('Glutawol Face Wash', 1500, '🧴')">+ Add to Cart</button> 
+          <button class="add-cart-btn" onclick="addToCart('Glutawol Face Wash', 1500, 'glutawol facewash.jpeg')">+ Add to Cart</button> 
         </div> 
       </div> 
     </div> 
 
-    <!-- PRODUCT 2: SERUM --> 
+    <!-- PRODUCT 2: SERUM (HOVER IMAGE ADDED) --> 
     <div class="prod-card reveal" data-category="treatment"> 
       <div class="prod-badge" style="background:linear-gradient(90deg,#b8860b,#daa520)">⭐ Top Pick</div> 
-      <div class="prod-main-img" style="font-size: 4.5rem;">💧</div> 
+      <div class="prod-main-img">
+         <img src="glutawol serum.jpeg" class="img-primary" alt="Glutawol Serum">
+         <img src="glutawol serum side.jpeg" class="img-hover" alt="Glutawol Serum Side">
+      </div> 
       <div class="prod-body"> 
         <div class="prod-category">Treatment</div> 
         <h3 class="prod-name">Glutawol Serum</h3> 
@@ -385,14 +396,18 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
         <div class="prod-divider"></div> 
         <div class="prod-footer"> 
           <div><div class="prod-price">Rs. 3,500</div><div class="prod-price-sub">per piece</div></div> 
-          <button class="add-cart-btn" onclick="addToCart('Glutawol Serum', 3500, '💧')">+ Add to Cart</button> 
+          <button class="add-cart-btn" onclick="addToCart('Glutawol Serum', 3500, 'glutawol serum.jpeg')">+ Add to Cart</button> 
         </div> 
       </div> 
     </div> 
 
-    <!-- PRODUCT 3: CREAM --> 
+    <!-- PRODUCT 3: CREAM (HOVER IMAGE ADDED) --> 
     <div class="prod-card reveal" data-category="moisturizer"> 
-      <div class="prod-main-img" style="font-size: 4.5rem;">🍶</div> 
+      <div class="prod-badge">Smooth Care</div>
+      <div class="prod-main-img">
+         <img src="glutawol cream.jpeg" class="img-primary" alt="Glutawol Cream">
+         <img src="glutawol cream side.jpeg" class="img-hover" alt="Glutawol Cream Side">
+      </div> 
       <div class="prod-body"> 
         <div class="prod-category">Moisturizer</div> 
         <h3 class="prod-name">Glutawol Cream</h3> 
@@ -401,14 +416,18 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
         <div class="prod-divider"></div> 
         <div class="prod-footer"> 
           <div><div class="prod-price">Rs. 1,200</div><div class="prod-price-sub">per piece</div></div> 
-          <button class="add-cart-btn" onclick="addToCart('Glutawol Cream', 1200, '🍶')">+ Add to Cart</button> 
+          <button class="add-cart-btn" onclick="addToCart('Glutawol Cream', 1200, 'glutawol cream.jpeg')">+ Add to Cart</button> 
         </div> 
       </div> 
     </div> 
 
-    <!-- PRODUCT 4: SOAP --> 
+    <!-- PRODUCT 4: SOAP (HOVER IMAGE ADDED) --> 
     <div class="prod-card reveal" data-category="cleanser"> 
-      <div class="prod-main-img" style="font-size: 4.5rem;">🧼</div> 
+      <div class="prod-badge">Gentle Cleansing</div>
+      <div class="prod-main-img">
+         <img src="glutawol soap.jpeg" class="img-primary" alt="Glutawol Soap">
+         <img src="glutawol soap side.jpeg" class="img-hover" alt="Glutawol Soap Side">
+      </div> 
       <div class="prod-body"> 
         <div class="prod-category">Cleanser</div> 
         <h3 class="prod-name">Glutawol Soap</h3> 
@@ -417,7 +436,7 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
         <div class="prod-divider"></div> 
         <div class="prod-footer"> 
           <div><div class="prod-price">Rs. 1,200</div><div class="prod-price-sub">per piece</div></div> 
-          <button class="add-cart-btn" onclick="addToCart('Glutawol Soap', 1200, '🧼')">+ Add to Cart</button> 
+          <button class="add-cart-btn" onclick="addToCart('Glutawol Soap', 1200, 'glutawol soap.jpeg')">+ Add to Cart</button> 
         </div> 
       </div> 
     </div> 
@@ -428,7 +447,8 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
 <section id="bundle"> 
   <div class="bundle-wrap"> 
     <div class="bundle-img-wrap reveal"> 
-      <div class="bundle-img-fallback">🛍️<span>Glutawol Premium Pack</span></div>
+       <!-- BUNDLE PACK IMAGE ADDED -->
+       <img src="glutawol skincare bundle.jpeg" alt="Glutawol Bundle Pack">
     </div> 
     <div class="bundle-details reveal"> 
       <div class="bundle-tag">✦ Special Offer</div> 
@@ -446,7 +466,7 @@ footer {background:var(--black);border-top:1px solid var(--border);padding:4rem 
         <div class="bundle-save">Save Rs. 700</div> 
       </div> 
       <div class="bundle-btns"> 
-        <button class="btn-gold" onclick="addToCart('Complete Bundle', 6700, '🛍️')">🛒 Add to Cart</button> 
+        <button class="btn-gold" onclick="addToCart('Complete Bundle', 6700, 'glutawol skincare bundle.jpeg')">🛒 Add to Cart</button> 
         <a href="https://wa.me/923207895540?text=Hi!%20I%20want%20to%20order%20the%20Complete%20Glutawol%20Bundle%20Pack." target="_blank" class="btn-wa">💬 WhatsApp Order</a> 
       </div> 
     </div> 
@@ -643,12 +663,12 @@ reveals.forEach(el => obs.observe(el));
 
 // OPERATIONAL CART MANAGEMENT MATRIX 
 let cart = []; 
-function addToCart(name, price, emoji) { 
+function addToCart(name, price, img) { 
   const ex = cart.find(i => i.name === name); 
   if(ex) { 
     ex.qty++; 
   } else { 
-    cart.push({name, price, emoji, qty: 1}); 
+    cart.push({name, price, img, qty: 1}); 
   } 
   updateCart(); 
   showToast('✦ ' + name + ' added to cart'); 
@@ -669,7 +689,7 @@ function updateCart() {
   let total = 0; 
   itemsEl.innerHTML = cart.map((item, idx) => { 
     total += item.price * item.qty; 
-    return `<div class="cart-item"> <div class="cart-item-img" style="background:var(--black4); border-radius:4px;">${item.emoji}</div> <div class="cart-item-info"> <div class="cart-item-name">${item.name}</div> <div class="cart-item-price">Rs. ${item.price.toLocaleString()}</div> <div class="cart-item-qty"> <button class="qty-btn" onclick="changeQty(${idx},-1)">−</button> <span class="qty-num">${item.qty}</span> <button class="qty-btn" onclick="changeQty(${idx},1)">+</button> </div> </div> <button class="cart-remove" onclick="removeItem(${idx})">✕</button> </div>`; 
+    return `<div class="cart-item"> <div class="cart-item-img"><img src="${item.img}" alt="${item.name}"></div> <div class="cart-item-info"> <div class="cart-item-name">${item.name}</div> <div class="cart-item-price">Rs. ${item.price.toLocaleString()}</div> <div class="cart-item-qty"> <button class="qty-btn" onclick="changeQty(${idx},-1)">−</button> <span class="qty-num">${item.qty}</span> <button class="qty-btn" onclick="changeQty(${idx},1)">+</button> </div> </div> <button class="cart-remove" onclick="removeItem(${idx})">✕</button> </div>`; 
   }).join(''); 
   document.getElementById('cartTotal').textContent = 'Rs. ' + total.toLocaleString(); 
 } 
@@ -696,6 +716,7 @@ function toggleCart(forceOpen) {
   } 
 } 
 
+// CHECKOUT VIA WHATSAPP WITH IMAGE REFERENCES
 function checkoutWhatsApp() { 
   if(!cart.length) return; 
   let msg = 'Hi! I want to place an order:%0A%0A'; 
