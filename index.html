@@ -389,3 +389,320 @@
             border-top: 1px solid rgba(197, 168, 128, 0.1);
             padding: 2rem 0;
             text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer-info {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-info p {
+            margin-bottom: 0.4rem;
+        }
+
+        .footer-info a {
+            color: var(--primary-gold);
+            text-decoration: none;
+        }
+
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1500;
+            display: none;
+        }
+
+        .cart-overlay.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <img src="rz commerce logo.jpeg" alt="RZ Commerce Logo" class="logo-img">
+            <button class="cart-icon-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge" id="cart-badge-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <img src="rz commerce glutawol banner.jpeg" alt="RZ Commerce Glutawol Premium Skincare Banner" class="hero-banner">
+    </section>
+
+    <main class="catalog-container">
+        <h1 class="section-title">The Glutawol Skincare Collection</h1>
+        
+        <div class="products-grid">
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="glutawol facewash.jpeg" alt="Glutawol Facewash" class="product-main-img" id="main-img-facewash">
+                </div>
+                <div class="thumbnail-row">
+                    <img src="glutawol facewash.jpeg" class="thumb-img active" onclick="changeImage('main-img-facewash', 'glutawol facewash.jpeg', this)">
+                    <img src="glutawol facewash side.jpeg" class="thumb-img" onclick="changeImage('main-img-facewash', 'glutawol facewash side.jpeg', this)">
+                    <img src="glutawol facewash packaging.jpeg" class="thumb-img" onclick="changeImage('main-img-facewash', 'glutawol facewash packaging.jpeg', this)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Glutawol Facewash</h3>
+                    <p class="price-tag">Rs. 1,250</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Glutawol Facewash', 1250)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="glutawol serum.jpeg" alt="Glutawol Serum" class="product-main-img" id="main-img-serum">
+                </div>
+                <div class="thumbnail-row">
+                    <img src="glutawol serum.jpeg" class="thumb-img active" onclick="changeImage('main-img-serum', 'glutawol serum.jpeg', this)">
+                    <img src="glutawol serum side.jpeg" class="thumb-img" onclick="changeImage('main-img-serum', 'glutawol serum side.jpeg', this)">
+                    <img src="glutawol serum packaging.jpeg" class="thumb-img" onclick="changeImage('main-img-serum', 'glutawol serum packaging.jpeg', this)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Glutawol Serum</h3>
+                    <p class="price-tag">Rs. 1,850</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Glutawol Serum', 1850)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="glutawol cream.jpeg" alt="Glutawol Cream" class="product-main-img" id="main-img-cream">
+                </div>
+                <div class="thumbnail-row">
+                    <img src="glutawol cream.jpeg" class="thumb-img active" onclick="changeImage('main-img-cream', 'glutawol cream.jpeg', this)">
+                    <img src="glutawol cream side.jpeg" class="thumb-img" onclick="changeImage('main-img-cream', 'glutawol cream side.jpeg', this)">
+                    <img src="glutawol cream packaging.jpeg" class="thumb-img" onclick="changeImage('main-img-cream', 'glutawol cream packaging.jpeg', this)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Glutawol Cream</h3>
+                    <p class="price-tag">Rs. 1,450</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Glutawol Cream', 1450)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="glutawol soap.jpeg" alt="Glutawol Soap" class="product-main-img" id="main-img-soap">
+                </div>
+                <div class="thumbnail-row">
+                    <img src="glutawol soap.jpeg" class="thumb-img active" onclick="changeImage('main-img-soap', 'glutawol soap.jpeg', this)">
+                    <img src="glutawol soap side.jpeg" class="thumb-img" onclick="changeImage('main-img-soap', 'glutawol soap side.jpeg', this)">
+                    <img src="glutawol soap packaging.jpeg" class="thumb-img" onclick="changeImage('main-img-soap', 'glutawol soap packaging.jpeg', this)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Glutawol Soap</h3>
+                    <p class="price-tag">Rs. 750</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Glutawol Soap', 750)">Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="product-card" style="grid-column: 1 / -1; max-width: 500px; margin: 2rem auto 0 auto; border: 1px dashed var(--primary-gold);">
+                <div class="product-image-container" style="height: 280px;">
+                    <img src="glutawol skincare bundle.jpeg" alt="Complete Glutawol Skin Care Bundle Pack" class="product-main-img">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name" style="color: var(--primary-light);">Complete Glutawol Bundle Pack</h3>
+                    <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 0.5rem;">Includes Facewash, Serum, Cream & Soap.</p>
+                    <p class="price-tag" style="font-size: 1.4rem;">Rs. 4,999 <span style="font-size: 0.9rem; text-decoration: line-through; color: #888; margin-left: 10px;">Rs. 5,300</span></p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Complete Glutawol Bundle Pack', 4999)">Buy Complete Pack</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <button class="close-cart-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        
+        <div class="cart-items-body" id="cart-items-container">
+            <p style="text-align: center; color: #888; margin-top: 2rem;">Your cart is currently empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-price-row">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal-display">Rs. 0</span>
+            </div>
+            
+            <form class="checkout-form" onsubmit="processCheckout(event)">
+                <input type="text" id="cust-name" placeholder="Full Name" required>
+                <input type="tel" id="cust-phone" placeholder="WhatsApp / Phone Number" required>
+                <input type="text" id="cust-address" placeholder="Complete Delivery Address" required>
+                <input type="text" id="cust-city" placeholder="City" required>
+                <button type="submit" class="submit-order-btn">
+                    <i class="fab fa-whatsapp"></i> Confirm Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2026 <strong>RZ Commerce</strong>. All Rights Reserved.</p>
+            <p>Managing Director: <strong>Ramzan Baloch</strong> | Multan, Pakistan</p>
+            <p>For inquiries: <a href="mailto:ramzanbalochmrbaloch@gmail.com">ramzanbalochmrbaloch@gmail.com</a> | WhatsApp: +92 320 7895540</p>
+        </div>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        // Interactive Gallery Switcher Logic Function
+        function changeImage(mainImgId, newSrc, thumbnailElement) {
+            document.getElementById(mainImgId).src = newSrc;
+            
+            // Toggle active highlight border class logic tracking
+            let siblingThumbs = thumbnailElement.parentElement.getElementsByClassName('thumb-img');
+            for(let thumb of siblingThumbs) {
+                thumb.classList.remove('active');
+            }
+            thumbnailElement.classList.add('active');
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            drawer.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if(existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name: name, price: price, quantity: 1 });
+            }
+            updateCartUI();
+            
+            // Open the shopping cart view instantly to encourage micro conversions checkout
+            document.getElementById('cart-drawer').classList.add('open');
+            document.getElementById('cart-overlay').classList.add('show');
+        }
+
+        function changeQuantity(name, amount) {
+            const item = cart.find(item => item.name === name);
+            if(item) {
+                item.quantity += amount;
+                if(item.quantity <= 0) {
+                    cart = cart.filter(i => i.name !== name);
+                }
+                updateCartUI();
+            }
+        }
+
+        function removeItem(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items-container');
+            const badge = document.getElementById('cart-badge-count');
+            const subtotalDisplay = document.getElementById('cart-subtotal-display');
+            
+            if (!container) return;
+            container.innerHTML = '';
+            let totalItems = 0;
+            let subtotal = 0;
+
+            if(cart.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #888; margin-top: 2rem;">Your cart is currently empty.</p>';
+                if(badge) badge.innerText = '0';
+                if(subtotalDisplay) subtotalDisplay.innerText = 'Rs. 0';
+                return;
+            }
+
+            cart.forEach(item => {
+                totalItems += item.quantity;
+                subtotal += (item.price * item.quantity);
+
+                const itemHTML = `
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>Rs. ${item.price.toLocaleString()} x ${item.quantity}</p>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="changeQuantity('${item.name}', -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="qty-btn" onclick="changeQuantity('${item.name}', 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item-btn" onclick="removeItem('${item.name}')">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                `;
+                container.innerHTML += itemHTML;
+            });
+
+            if(badge) badge.innerText = totalItems;
+            if(subtotalDisplay) subtotalDisplay.innerText = 'Rs. ' + subtotal.toLocaleString();
+        }
+
+        // WhatsApp Order Serialization Integration Router Logic Hook
+        function processCheckout(event) {
+            event.preventDefault();
+            
+            if(cart.length === 0) {
+                alert("Your bag is empty! Add products before checking out.");
+                return;
+            }
+
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const address = document.getElementById('cust-address').value;
+            const city = document.getElementById('cust-city').value;
+
+            // Generate structured readable clean text output receipt invoice
+            let orderText = `🛒 *NEW ORDER - RZ COMMERCE* \n\n`;
+            orderText += `👤 *Customer Details:* \n`;
+            orderText += `   - Name: ${name}\n`;
+            orderText += `   - Phone: ${phone}\n`;
+            orderText += `   - Address: ${address}, ${city}\n\n`;
+            
+            orderText += `📦 *Order Items:* \n`;
+            let grossTotal = 0;
+            cart.forEach((item, index) => {
+                let itemTotal = item.price * item.quantity;
+                grossTotal += itemTotal;
+                orderText += `   ${index + 1}. ${item.name} (x${item.quantity}) = Rs. ${itemTotal.toLocaleString()}\n`;
+            });
+
+            orderText += `\n💰 *Total Bill Amount:* Rs. ${grossTotal.toLocaleString()}\n\n`;
+            orderText += `⚡ _Please confirm my delivery dispatch updates._`;
+
+            // Clean sanitization string encoding for direct URI routing parameter
+            const encodedText = encodeURIComponent(orderText);
+            const whatsappNumber = "923207895540"; // Your exact business operations routing channel
+            
+            window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedText}`, '_blank');
+        }
+
+        // Mapping functions to window scope for inline HTML event handlings
+        window.changeImage = changeImage;
+        window.toggleCart = toggleCart;
+        window.addToCart = addToCart;
+        window.changeQuantity = changeQuantity;
+        window.removeItem = removeItem;
+        window.processCheckout = processCheckout;
+    </script>
+</body>
+</html>
