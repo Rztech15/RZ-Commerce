@@ -1,185 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RZ Commerce | Premium Glutawol Skincare & Beauty Products Pakistan</title>
-    
-    <!-- Custom Favicon (RZ Logo Tab Mein Nazar Aaye) -->
-    <link rel="icon" type="image/jpeg" href="rz commerce logo.jpeg">
-    <link rel="shortcut icon" type="image/jpeg" href="rz commerce logo.jpeg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RZ Commerce | Premium Glutawol Skincare & Beauty Products Pakistan</title>
 
-    <meta name="description" content="Shop 100% authentic Glutawol Skincare at RZ Commerce.">
-    <meta name="keywords" content="Glutawol, Glutawol Face Wash, Glutawol Serum, Glutawol Cream, Glutawol Soap, Glutawol Pakistan, RZ Commerce">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="RZ Commerce">
-    <link rel="canonical" href="https://rzcommerce.online">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rzcommerce.online">
-    <meta property="og:title" content="RZ Commerce | Premium Glutawol Skincare & Beauty Collection">
-    <meta property="og:description" content="Get glowing skin with the ultimate Glutawol collection.">
-    <meta property="og:image" content="rz commerce glutawol banner.jpeg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rzcommerce.online">
-    <meta property="twitter:title" content="RZ Commerce | Premium Glutawol Skincare">
-    <meta property="twitter:description" content="Shop authentic Glutawol skincare products.">
-    <meta property="twitter:image" content="rz commerce glutawol banner.jpeg">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
-    
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<!-- Custom Favicon (RZ logo browser tab mein nazar aaye) -->
+<link rel="icon" type="image/jpeg" href="rz commerce logo.jpeg">
+<link rel="shortcut icon" type="image/jpeg" href="rz commerce logo.jpeg">
 
-    <style>
-    :root {
-      --black:#0a0a0a; --black2:#111111; --black3:#1a1a1a; --black4:#222222;
-      --gold:#c9a84c; --gold2:#e8c97a; --gold3:#f5e0a0; --gold-dark:#9a7a2e;
-      --white:#ffffff; --cream:#f5f0e8; --gray:#aaaaaa; /* Improved text contrast */
-      --border:rgba(201,168,76,0.3);
-      --grad-gold:linear-gradient(135deg,#9a7a2e,#c9a84c,#e8c97a,#c9a84c,#9a7a2e);
-      --grad-gold2:linear-gradient(90deg,#c9a84c,#e8c97a);
-      --shadow-lg:0 20px 60px rgba(0,0,0,0.5);
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;}
-    ::-webkit-scrollbar{width:4px;}
-    ::-webkit-scrollbar-track{background:var(--black);}
-    ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
-    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}
-    .reveal.visible{opacity:1;transform:translateY(0);}
+<meta name="description" content="Shop 100% authentic Glutawol Skincare at RZ Commerce.">
+<meta name="keywords" content="Glutawol, Glutawol Face Wash, Glutawol Serum, Glutawol Cream, Glutawol Soap, Glutawol Pakistan, RZ Commerce">
+<meta name="robots" content="index, follow">
+<meta name="author" content="RZ Commerce">
+<link rel="canonical" href="https://rzcommerce.online">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rzcommerce.online">
+<meta property="og:title" content="RZ Commerce | Premium Glutawol Skincare & Beauty Collection">
+<meta property="og:description" content="Get glowing skin with the ultimate Glutawol collection.">
+<meta property="og:image" content="rz commerce glutawol banner.jpeg">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://rzcommerce.online">
+<meta property="twitter:title" content="RZ Commerce | Premium Glutawol Skincare">
+<meta property="twitter:description" content="Shop authentic Glutawol skincare products.">
+<meta property="twitter:image" content="rz commerce glutawol banner.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
 
-    /* NAVBAR - Enhanced Prominence */
-    nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:15px 5%;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-    .nav-logo img{height:65px; object-fit:contain; filter: drop-shadow(0px 0px 8px rgba(201,168,76,0.4));} /* Prominent Logo */
-    .nav-links{display:flex;gap:2rem;}
-    .nav-links a{color:var(--white);font-size:0.85rem;font-weight:700;text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;text-shadow: 0 1px 2px rgba(0,0,0,0.8);}
-    .nav-links a:hover{color:var(--gold2);}
-    .nav-cart{display:flex;align-items:center;gap:8px;background:var(--grad-gold2);color:var(--black);padding:10px 22px;border-radius:4px;font-size:0.78rem;font-weight:800;cursor:pointer;border:none;position:relative;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s;}
-    .nav-cart:hover{opacity:0.88;}
-    .cart-count{position:absolute;top:-7px;right:-7px;background:var(--white);color:var(--black);width:20px;height:20px;border-radius:50%;font-size:0.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;}
+<!-- Firebase Core Components (Original Ke Mutabiq Mehfooz) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
 
-    /* HERO - Sharper Image & Social Proof Alignment */
-    #home{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;}
-    .hero-banner{position:absolute;inset:0;background:var(--black);}
-    .hero-banner img{width:100%;height:100%;object-fit:cover;opacity:0.55;filter: brightness(1.15) contrast(1.1); /* Sharp & Bright Image */}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.95) 40%,rgba(0,0,0,0.4) 100%);}
-    .hero-content{position:relative;z-index:2;padding:160px 6% 80px;max-width:650px;}
-    .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold);font-size:0.7rem;font-weight:600;padding:7px 18px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}
-    
-    /* Social Proof Badges In Hero */
-    .hero-social-proof {display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;}
-    .proof-tag {background: rgba(201,168,76,0.15); border: 1px solid var(--gold); padding: 5px 12px; font-size: 0.75rem; font-weight: 600; color: var(--gold3); border-radius: 3px;}
+<style>
+:root {
+  --black:#0a0a0a; --black2:#111111; --black3:#1a1a1a; --black4:#222222;
+  --gold:#c9a84c; --gold2:#e8c97a; --gold3:#f5e0a0; --gold-dark:#9a7a2e;
+  --white:#ffffff; --cream:#f5f0e8; --gray:#b3b3b3; /* Contrast increased from #888888 */
+  --border:rgba(201,168,76,0.25);
+  --grad-gold:linear-gradient(135deg,#9a7a2e,#c9a84c,#e8c97a,#c9a84c,#9a7a2e);
+  --grad-gold2:linear-gradient(90deg,#c9a84c,#e8c97a);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.5);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--black);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
 
-    .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;line-height:1.05;color:var(--white);margin-bottom:1rem;}
-    .hero-title .gold{background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;}
-    .hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:2rem;max-width:460px;}
-    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
-    
-    .btn-gold{background:var(--grad-gold2);color:var(--black);padding:14px 30px;font-size:0.82rem;font-weight:800;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s,transform 0.2s;box-shadow:0 4px 25px rgba(201,168,76,0.35);}
-    .btn-gold:hover{opacity:0.88;transform:translateY(-2px);}
+/* NAVBAR - Font Weight, Contrast and Logo Enhanced */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo img{height:60px;object-fit:contain;filter:drop-shadow(0px 2px 8px rgba(201,168,76,0.3));} /* Prominent Logo */
+.nav-logo-fallback{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:none;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{color:var(--white);font-size:0.85rem;font-weight:700;text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;} /* Highly Visible Link Text */
+.nav-links a:hover{color:var(--gold);}
+.nav-cart{display:flex;align-items:center;gap:8px;background:var(--grad-gold2);color:var(--black);padding:10px 22px;border-radius:4px;font-size:0.78rem;font-weight:800;cursor:pointer;border:none;position:relative;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s;}
+.nav-cart:hover{opacity:0.88;}
+.cart-count{position:absolute;top:-7px;right:-7px;background:var(--white);color:var(--black);width:20px;height:20px;border-radius:50%;font-size:0.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;}
 
-    /* TRUST BAR - Enhanced */
-    .trust-bar{background:var(--black3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 6%;display:flex;justify-content:space-around;flex-wrap:wrap;gap:1.5rem;}
-    .trust-item{display:flex;align-items:center;gap:10px;}
-    .trust-icon{font-size:1.3rem;color:var(--gold2);}
-    .trust-text{font-size:0.78rem;color:var(--white);letter-spacing:0.08em;text-transform:uppercase;font-weight:600;}
+/* HERO - Sharp Bright Image & Social Proof Grid */
+#home{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;}
+.hero-banner{position:absolute;inset:0;background:var(--black);}
+.hero-banner img{width:100%;height:100%;object-fit:cover;opacity:0.5;filter:brightness(1.15) contrast(1.08);} /* Sharp/Bright Filter */
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.94) 45%,rgba(0,0,0,0.4) 100%);}
+.hero-content{position:relative;z-index:2;padding:150px 6% 80px;max-width:650px;}
 
-    /* SECTIONS */
-    section{padding:100px 6%;}
-    .sec-tag{font-size:0.68rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:10px;}
-    .sec-tag::before,.sec-tag::after{content:'';flex:1;max-width:40px;height:1px;background:var(--gold);opacity:0.4;}
-    .sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:0.8rem;line-height:1.2;}
-    .sec-title span{background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-    .sec-sub{color:var(--gray);font-size:0.92rem;max-width:500px;line-height:1.8;margin-bottom:3rem;}
-    .sec-header{text-align:center;}
-    .sec-header .sec-tag{justify-content:center;}
-    .sec-header .sec-sub{margin:0 auto 3rem;}
+/* Social Proof in Hero */
+.hero-social-proof{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.2rem;}
+.proof-tag{background:rgba(201,168,76,0.12);border:1px solid var(--gold);color:var(--gold3);font-size:0.72rem;font-weight:600;padding:5px 12px;border-radius:3px;}
 
-    /* PRODUCTS */
-    #products{background:var(--black2);}
-    .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px; padding: 10px 0;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold);font-size:0.7rem;font-weight:600;padding:7px 18px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.5rem;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;line-height:1.05;color:var(--white);margin-bottom:1rem;}
+.hero-title .gold{background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;}
+.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:2rem;max-width:440px;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-gold{background:var(--grad-gold2);color:var(--black);padding:14px 30px;font-size:0.82rem;font-weight:800;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s,transform 0.2s;box-shadow:0 4px 25px rgba(201,168,76,0.35);}
+.btn-gold:hover{opacity:0.88;transform:translateY(-2px);}
+.btn-outline-gold{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:14px 30px;font-size:0.82rem;font-weight:600;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;}
+.btn-outline-gold:hover{background:var(--gold);color:var(--black);transform:translateY(-2px);}
 
-    /* PRODUCT CARD & PERFECT FITTING FIXED FRAMES */
-    .prod-card{background:var(--black3);border:1px solid var(--border);transition:border-color 0.3s,transform 0.3s;position:relative; display:flex; flex-direction:column; justify-content:space-between; height: 100%; overflow:hidden;}
-    .prod-card:hover{border-color:var(--gold);transform:translateY(-4px);}
-    .prod-badge{position:absolute;top:14px;left:14px;z-index:3;background:var(--grad-gold2);color:var(--black);font-size:0.62rem;font-weight:800;padding:5px 14px;letter-spacing:0.1em;text-transform:uppercase;}
+/* TRUST BAR - Enhanced Clean Badges */
+.trust-bar{background:var(--black3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 6%;display:flex;justify-content:space-around;flex-wrap:wrap;gap:1.5rem;}
+.trust-item{display:flex;align-items:center;gap:10px;}
+.trust-icon{font-size:1.2rem;color:var(--gold2);}
+.trust-text{font-size:0.78rem;color:var(--white);letter-spacing:0.08em;text-transform:uppercase;font-weight:600;}
 
-    /* IMAGE FIX (3 Images Frame Fitting) */
-    .prod-slider{width:100%;height:320px;background:#151515;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(201,168,76,0.1);}
-    .prod-slides{display:flex;width:100%;height:100%;transition:transform 0.4s ease;}
-    .prod-slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:15px;background:#151515;}
-    .prod-slide img{width:100%;height:100%;object-fit:contain; max-height:100%; filter: brightness(1.05);} /* Object Fit Complete Clean Fit */
+/* SECTIONS */
+section{padding:100px 6%;}
+.sec-tag{font-size:0.68rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:10px;}
+.sec-tag::before,.sec-tag::after{content:'';flex:1;max-width:40px;height:1px;background:var(--gold);opacity:0.4;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:0.8rem;line-height:1.2;}
+.sec-title span{background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sec-sub{color:var(--gray);font-size:0.92rem;max-width:500px;line-height:1.8;margin-bottom:3rem;}
+.sec-header{text-align:center;}
+.sec-header .sec-tag{justify-content:center;}
+.sec-header .sec-sub{margin:0 auto 3rem;}
 
-    .slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);width:35px;height:35px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;transition:all 0.2s;opacity:1;border-radius:50%;}
-    .slider-btn:hover{background:var(--gold);color:var(--black);}
-    .slider-btn.prev{left:10px;}
-    .slider-btn.next{right:10px;}
+/* PRODUCTS GRID */
+#products{background:var(--black2);}
+.filter-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:3rem;justify-content:center;}
+.filter-btn{padding:8px 20px;font-size:0.72rem;font-weight:600;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--gray);letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;}
+.filter-btn.active,.filter-btn:hover{background:var(--gold);color:var(--black);border-color:var(--gold);}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:25px;}
 
-    /* PRODUCT BODY */
-    .prod-body{padding:1.4rem; flex-grow:1; display:flex; flex-direction:column; justify-content:space-between;}
-    .prod-info-block {margin-bottom: 1rem;}
-    .prod-category{font-size:0.65rem;color:var(--gold);font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;}
-    .prod-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:0.25rem;}
-    .prod-subtitle{font-size:0.78rem;color:var(--gray);margin-bottom:0.8rem;font-style:italic;}
-    
-    .prod-divider{height:1px;background:var(--border);margin-bottom:1rem;}
-    .prod-footer{display:flex;flex-direction:column;gap:0.8rem;width:100%;}
-    .price-container {display:flex; align-items:center; justify-content:space-between;}
-    .prod-price{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-    
-    /* PROMINENT CTA BUTTONS */
-    .add-cart-btn{background:#25D366;color:var(--white);border:none;padding:12px 16px;font-size:0.85rem;font-weight:800;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;text-align:center;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow: 0 4px 15px rgba(37,211,102,0.3);}
-    .add-cart-btn:hover{background:#1ebd54;transform:translateY(-2px);}
+/* PRODUCT CARD & PERFECT FITTING FIXED SLIDER FRAMES */
+.prod-card{background:var(--black3);border:1px solid var(--border);transition:border-color 0.3s,transform 0.3s;position:relative;display:flex;flex-direction:column;justify-content:space-between;height:100%;}
+.prod-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.prod-badge{position:absolute;top:14px;left:14px;z-index:3;background:var(--grad-gold2);color:var(--black);font-size:0.62rem;font-weight:800;padding:5px 14px;letter-spacing:0.1em;text-transform:uppercase;}
 
-    /* REVIEWS SECTION */
-    #reviews{background:var(--black);}
-    .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px; margin-top:2rem;}
-    .review-card{background:var(--black3);border:1px solid var(--border);padding:2.2rem;transition:border-color 0.2s;}
-    .review-card:hover{border-color:var(--gold);}
-    .review-stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:1rem;}
-    .review-text{font-size:0.88rem;color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:1.5rem;font-style:italic;}
-    .review-divider{height:1px;background:var(--border);margin-bottom:1.2rem;}
-    
-    .review-author{display:flex;align-items:center;gap:1rem;}
-    .review-avatar{width:45px;height:45px;border-radius:50%;background:var(--grad-gold2);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--black);flex-shrink:0;}
-    .review-name{font-weight:700;font-size:0.92rem;color:var(--white);}
-    .review-loc{font-size:0.75rem;color:var(--gold);margin-top:2px; font-weight:500;}
+/* 3 Images Complete Fit Frame Alignment (Fixed Squeezing/Hiding) */
+.prod-slider{width:100%;height:290px;background:#141414;overflow:hidden;position:relative;display:flex;align-items:center;}
+.prod-slides{display:flex;height:100%;width:100%;transition:transform 0.4s ease;}
+.prod-slide{min-width:100%;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:15px;flex-shrink:0;} /* flex-shrink: 0 prevents hiding */
+.prod-slide img{width:100%;height:100%;object-fit:contain;max-height:100%;} /* Pure clean aspect ratio fit */
 
-    /* COMPLETED RESPONSIVE FOOTER */
-    footer {background: var(--black2); border-top: 1px solid var(--border); padding: 60px 6% 30px; font-size: 0.9rem;}
-    .footer-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;}
-    .footer-brand h3 {font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 15px; color: var(--gold2);}
-    .footer-brand p {color: var(--gray); font-size: 0.85rem; line-height: 1.6;}
-    .footer-links h4, .footer-contact h4 {font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); margin-bottom: 20px; border-left: 3px solid var(--gold); padding-left: 10px;}
-    .footer-links ul {list-style: none;}
-    .footer-links ul li {margin-bottom: 10px;}
-    .footer-links ul li a {color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: color 0.2s;}
-    .footer-links ul li a:hover {color: var(--gold);}
-    .footer-contact p {color: var(--gray); font-size: 0.85rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;}
-    .footer-contact a {color: var(--gray); text-decoration: none;}
-    .footer-contact a:hover {color: var(--gold);}
-    .footer-bottom {border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;}
-    .footer-bottom p {font-size: 0.8rem; color: var(--gray);}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:5;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.85rem;transition:all 0.2s;opacity:0;}
+.prod-card:hover .slider-btn{opacity:1;}
+.slider-btn:hover{background:var(--gold);color:var(--black);}
+.slider-btn.prev{left:8px;}
+.slider-btn.next{right:8px;}
+.slider-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;}
+.slider-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:all 0.2s;}
+.slider-dot.active{background:var(--gold);width:16px;border-radius:3px;}
 
-    /* MOBILE RESPONSIVENESS FIXES */
-    @media(max-width: 768px) {
-        nav {padding: 12px 4%;}
-        .nav-links {display: none;} /* Mobile dropdown mechanism can be handled by JS */
-        .hero-content {padding-top: 130px; text-align: center;}
-        .hero-title {font-size: 2.4rem;}
-        .hero-social-proof, .hero-btns {justify-content: center;}
-        .trust-bar {flex-direction: column; align-items: flex-start; padding-left: 10%;}
-        .footer-bottom {flex-direction: column; text-align: center; justify-content: center;}
-    }
-    </style>
+/* PRODUCT BODY */
+.prod-body{padding:1.4rem;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between;}
+.prod-info-block{margin-bottom:1rem;}
+.prod-category{font-size:0.65rem;color:var(--gold);font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;}
+.prod-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:0.25rem;}
+.prod-subtitle{font-size:0.75rem;color:var(--gray);margin-bottom:0.8rem;font-style:italic;}
+.prod-features{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1rem;}
+.prod-feature{background:rgba(201,168,76,0.08);border:1px solid var(--border);color:var(--gold2);font-size:0.62rem;padding:3px 9px;letter-spacing:0.05em;}
+.prod-divider{height:1px;background:var(--border);margin-bottom:1rem;}
+.prod-footer{display:flex;flex-direction:column;gap:0.8rem;width:100%;}
+.price-container{display:flex;align-items:center;justify-content:space-between;width:100%;}
+.prod-price{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.prod-price-sub{font-size:0.68rem;color:var(--gray);font-family:'Inter',sans-serif;}
+
+/* PROMINENT WHATSAPP CTA BUTTON */
+.add-cart-btn{background:#25D366;color:var(--white);border:none;padding:12px 16px;font-size:0.8rem;font-weight:800;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;text-align:center;width:100%;display:flex;align-items:center;justify-content:center;gap:6px;box-shadow:0 4px 15px rgba(37,211,102,0.25);}
+.add-cart-btn:hover{background:#1ebd54;transform:translateY(-1px);}
+
+/* BUNDLE */
+#bundle{background:var(--black);position:relative;overflow:hidden;}
+#bundle::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.05) 0%,transparent 70%);}
+.bundle-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;}
+.bundle-img-wrap{border:1px solid var(--border);position:relative;height:380px;background:var(--black3);overflow:hidden;}
+.bundle-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.bundle-img-wrap:hover img{transform:scale(1.04);}
+.bundle-tag{font-size:0.68rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;font-weight:600;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
+.bundle-tag::after{content:'';flex:1;height:1px;background:var(--border);}
+.bundle-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:var(--white);margin-bottom:1rem;line-height:1.1;}
+.bundle-title span{background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.bundle-desc{color:var(--gray);font-size:0.88rem;line-height:1.8;margin-bottom:1.5rem;}
+.bundle-items-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-bottom:2rem;}
+.bundle-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.75);}
+.bundle-item::before{content:'✦';color:var(--gold);font-size:0.55rem;}
+.bundle-price-row{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;padding:1.5rem;border:1px solid var(--border);background:rgba(201,168,76,0.03);}
+.bundle-old{font-size:1rem;color:var(--gray);text-decoration:line-through;}
+.bundle-new{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:800;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.bundle-save{background:var(--gold);color:var(--black);font-size:0.7rem;font-weight:800;padding:6px 14px;letter-spacing:0.08em;}
+.bundle-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-wa{background:#25D366;color:var(--white);padding:14px 26px;font-size:0.8rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.08em;text-transform:uppercase;transition:opacity 0.2s,transform 0.2s;}
+.btn-wa:hover{opacity:0.9;transform:translateY(-2px);}
+
+/* WHY */
+#why{background:var(--black2);}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;margin-top:3rem;}
+.why-card{background:var(--black3);padding:2.5rem 1.8rem;border:1px solid var(--border);text-align:center;transition:border-color 0.2s,background 0.2s;}
+.why-card:hover{border-color:var(--gold);background:rgba(201,168,76,0.03);}
+.why-icon{font-size:2rem;margin-bottom:1rem;}
+.why-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;}
+.why-desc{font-size:0.8rem;color:var(--gray);line-height:1.7;}
+
+/* REVIEWS - Name, Star and Cities Configuration */
+#reviews{background:var(--black);}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.review-card{background:var(--black3);border:1px solid var(--border);padding:2.2rem;transition:border-color 0.2s;}
+.review-card:hover{border-color:var(--gold);}
+.review-stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:1rem;}
+.review-text{font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:1.2rem;font-style:italic;}
+.review-divider{height:1px;background:var(--border);margin-bottom:1.2rem;}
+.review-author{display:flex;align-items:center;gap:1rem;}
+.review-avatar{width:42px;height:42px;border-radius:50%;background:var(--grad-gold2);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--black);flex-shrink:0;}
+.review-name{font-weight:700;font-size:0.92rem;color:var(--white);}
+.review-loc{font-size:0.75rem;color:var(--gold);margin-top:2px;font-weight:500;}
+
+/* FEEDBACK SECTION */
+#feedback{background:var(--black2);}
+.feedback-wrap{max-width:700px;margin:0 auto;}
+.feedback-form{background:var(--black3);border:1px solid var(--border);padding:2.5rem;}
+.fb-stars-select{display:flex;gap:6px;margin-bottom:1.5rem;}
+.fb-star{font-size:1.8rem;cursor:pointer;color:rgba(255,255,255,0.15);transition:color 0.15s;}
+.fb-star.active,.fb-star:hover{color:var(--gold);}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:1.1rem;}
+.form-group label{font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;}
+.form-group input,.form-group textarea{background:var(--black4);border:1px solid var(--border);padding:12px 15px;color:var(--white);font-size:0.86rem;font-family:'Inter',sans-serif;transition:border-color 0.2s;outline:none;}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold);}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.22);}
+.fb-submit{width:100%;background:var(--grad-gold2);color:var(--black);border:none;padding:14px;font-size:0.82rem;font-weight:800;cursor:pointer;letter-spacing:0.1em;text-transform:uppercase;transition:opacity 0.2s;margin-top:0.5rem;}
+.fb-submit:hover{opacity:0.88;}
+.fb-submitted{display:none;text-align:center;padding:1rem;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);color:#4ade80;font-size:0.84rem;margin-top:1rem;}
+
+/* LIVE FEEDBACK CARDS */
+.live-feedback-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;margin-top:3rem;}
+.live-review-card{background:var(--black3);border:1px solid var(--border);padding:1.8rem;transition:border-color 0.2s;animation:fadeInCard 0.5s ease;}
+@keyframes fadeInCard{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.live-review-card:hover{border-color:var(--gold);}
+.live-stars{color:var(--gold);font-size:0.8rem;margin-bottom:0.6rem;}
+.live-text{font-size:0.84rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:0.8rem;font-style:italic;}
+.live-like-row{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem;}
+.live-divider{height:1px;background:var(--border);margin-bottom:0.8rem;}
+.live-author-row{display:flex;align-items:center;gap:0.8rem;}
+.live-avatar{width:34px;height:34px;border-radius:50%;background:var(--grad-gold2);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--black);flex-shrink:0;}
+.live-name{font-weight:600;font-size:0.82rem;color:var(--white);}
+.live-loc{font-size:0.7rem;color:var(--gold);}
+.no-feedback{text-align:center;padding:3rem;color:var(--gray);font-size:0.86rem;border:1px solid var(--border);}
+
+/* CONTACT */
+#contact{background:var(--black2);}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:1rem;margin-top:1rem;}
+.contact-item{display:flex;align-items:center;gap:1.2rem;padding:1.2rem;border:1px solid var(--border);transition:border-color 0.2s;}
+.contact-item:hover{border-color:var(--gold);}
+.contact-icon{width:42px;height:42px;background:rgba(201,168,76,0.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.contact-label{font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;}
+.contact-val{font-size:0.88rem;color:var(--white);font-weight:500;margin-top:2px;}
+.order-form-wrap{background:var(--black3);border:1px solid var(--border);padding:2.5rem;}
+.order-form-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.4rem;}
+.order-form-sub{font-size:0.8rem;color:var(--gray);margin-bottom:2rem;}
+.form-group select{background:var(--black4);border:1px solid var(--border);padding:12px 15px;color:var(--white);font-size:0.86rem;font-family:'Inter',sans-serif;transition:border-color 0.2s;outline:none;}
+.form-group select:focus{border-color:var(--gold);}
+.form-group select option{background:var(--black3);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.order-submit{width:100%;background:var(--grad-gold2);color:var(--black);border:none;padding:15px;font-size:0.82rem;font-weight:800;cursor:pointer;letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity 0.2s;}
+.order-submit:hover{opacity:0.88;}
+
+/* COMPLETE RESPONSIVE FOOTER */
+footer{background:var(--black2);border-top:1px solid var(--border);padding:60px 6% 30px;font-size:0.9rem;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-bottom:40px;}
+.footer-brand h3{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:15px;color:var(--gold2);}
+.footer-brand p{color:var(--gray);font-size:0.85rem;line-height:1.6;}
+.footer-links h4,.footer-contact h4{font-size:0.9rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);margin-bottom:20px;border-left:3px solid var(--gold);padding-left:10px;}
+.footer-links ul{list-style:none;}
+.footer-links ul li{margin-bottom:10px;}
+.footer-links ul li a{color:var(--gray);text-decoration:none;font-size:0.85rem;transition:color 0.2s;}
+.footer-links ul li a:hover{color:var(--gold);}
+.footer-contact p{color:var(--gray);font-size:0.85rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.footer-contact a{color:var(--gray);text-decoration:none;transition:color 0.2s;}
+.footer-contact a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:25px;text-align:center;display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;}
+.footer-bottom p{font-size:0.8rem;color:var(--gray);}
+
+/* MOBILE RESPONSIVENESS TESTING FIXES */
+@media(max-width: 768px){
+    nav{padding:12px 4%;}
+    .nav-links{display:none;} /* Can toggle via dashboard JS drawer */
+    .hero-content{padding-top:140px;text-align:center;margin:0 auto;}
+    .hero-social-proof,.hero-btns{justify-content:center;}
+    .hero-title{font-size:2.4rem;}
+    .trust-bar{flex-direction:column;align-items:flex-start;padding-left:12%;gap:1rem;}
+    .footer-bottom{flex-direction:column;text-align:center;justify-content:center;}
+}
+</style>
 </head>
 <body>
 
@@ -206,7 +293,7 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <!-- Hero Social Proof Added -->
+            <!-- Hero Social Proof Section Elements -->
             <div class="hero-social-proof">
                 <span class="proof-tag">⭐ 500+ Happy Customers</span>
                 <span class="proof-tag">🚚 Delivery Across Pakistan</span>
@@ -242,7 +329,7 @@
         </div>
     </div>
 
-    <!-- PRODUCTS GRID SECTION -->
+    <!-- PRODUCTS SECTION (YOUR FIREBASE LOOP / DATA DOM WILL INJECT CARDS HERE) -->
     <section id="products">
         <div class="sec-header">
             <span class="sec-tag">Our Products</span>
@@ -252,33 +339,34 @@
 
         <div class="products-grid">
             
-            <!-- Example Product Card with Perfect 3-Image Fitting Layout -->
+            <!-- Structural Example Card: Copy this layout structure into your JS Firebase snapshot loop rendering block -->
             <div class="prod-card">
-                <span class="prod-badge">Best Seller</span>
+                <span class="prod-badge">Premium</span>
                 <div class="prod-slider">
-                    <!-- Nav Buttons -->
+                    <!-- Pure click events with no auto-scroll disruption -->
                     <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
                     <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
                     
-                    <!-- 3 Complete Fit Slides Frame -->
+                    <!-- 3 Custom Fit Slide Images Frame Container -->
                     <div class="prod-slides" data-current-index="0">
                         <div class="prod-slide">
-                            <img src="glutawol serum packaging.jpeg" alt="Glutawol Serum View 1">
+                            <img src="glutawol serum packaging.jpeg" alt="Glutawol Product View 1">
                         </div>
                         <div class="prod-slide">
-                            <img src="glutawol serum packaging.jpeg" alt="Glutawol Serum View 2">
+                            <img src="glutawol serum packaging.jpeg" alt="Glutawol Product View 2">
                         </div>
                         <div class="prod-slide">
-                            <img src="glutawol serum packaging.jpeg" alt="Glutawol Serum View 3">
+                            <!-- 3rd Image Clean Fit Layer -->
+                            <img src="glutawol serum packaging.jpeg" alt="Glutawol Product View 3 (Packaging)">
                         </div>
                     </div>
                 </div>
                 
                 <div class="prod-body">
                     <div class="prod-info-block">
-                        <span class="prod-category">Serums</span>
+                        <span class="prod-category">Skincare</span>
                         <h3 class="prod-name">Glutawol Radiance Serum</h3>
-                        <p class="prod-subtitle">Intensive Skin Whitening & Anti-Aging</p>
+                        <p class="prod-subtitle">Intensive Skin Whitening Formula</p>
                     </div>
                     <div class="prod-divider"></div>
                     <div class="prod-footer">
@@ -286,7 +374,7 @@
                             <span class="prod-price">Rs. 2,450</span>
                             <span class="prod-price-sub">In Stock</span>
                         </div>
-                        <!-- Order on WhatsApp Prominent CTA Button -->
+                        <!-- High Converting Prominent Call To Action -->
                         <button class="add-cart-btn" onclick="orderOnWhatsApp('Glutawol Radiance Serum')">
                             <span>💬 Order on WhatsApp</span>
                         </button>
@@ -306,7 +394,6 @@
         </div>
 
         <div class="reviews-grid">
-            <!-- Review 1 -->
             <div class="review-card">
                 <div class="review-stars">⭐⭐⭐⭐⭐</div>
                 <p class="review-text">"Mene Glutawol Serum use kiya hai aur meri skin ke dark spots kafi had tak light ho gye hain. Highly recommended product!"</p>
@@ -320,7 +407,6 @@
                 </div>
             </div>
 
-            <!-- Review 2 -->
             <div class="review-card">
                 <div class="review-stars">⭐⭐⭐⭐⭐</div>
                 <p class="review-text">"100% authentic products mile hain. Delivery bhi bohot fast thi aur WhatsApp team bohot supportive hai."</p>
@@ -334,7 +420,6 @@
                 </div>
             </div>
 
-            <!-- Review 3 -->
             <div class="review-card">
                 <div class="review-stars">⭐⭐⭐⭐⭐</div>
                 <p class="review-text">"Face wash aur cream ka combination amazing hai. Skin par natural glow aa gya hai bina kisi side effect ke."</p>
@@ -350,7 +435,7 @@
         </div>
     </section>
 
-    <!-- COMPLETED FOOTER SECTION -->
+    <!-- FULL COMPLETE RESPONSIVE FOOTER WITH POLICIES AND SUPPORT -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
@@ -386,11 +471,14 @@
         </div>
     </footer>
 
-    <!-- SLIDER JAVASCRIPT MECHANISM -->
+    <!-- STABLE CONTROL SCRIPTS (NO AUTO SCROLL INTERRUPTIONS) -->
     <script>
+        // Pure click event slider mechanism for individual product container scopes
         function moveSlide(button, direction) {
             const sliderContainer = button.parentElement;
             const slidesTrack = sliderContainer.querySelector('.prod-slides');
+            if (!slidesTrack) return;
+
             const totalSlides = slidesTrack.children.length;
             let currentIndex = parseInt(slidesTrack.getAttribute('data-current-index')) || 0;
 
@@ -406,9 +494,10 @@
             slidesTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
 
+        // WhatsApp Custom Intent API Redirect Trigger 
         function orderOnWhatsApp(productName) {
-            const phoneNumber = "923000000000"; // Apna correct WhatsApp number yahan enter karein
-            const message = encodeURIComponent(`Assalam-o-Alaikum RZ Commerce, I want to order/inquire about: ${productName}. Please give me more details.`);
+            const phoneNumber = "923000000000"; // Update with your active dynamic agent number
+            const message = encodeURIComponent(`Assalam-o-Alaikum RZ Commerce, I want to order/inquire about: ${productName}. Please share details.`);
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         }
     </script>
