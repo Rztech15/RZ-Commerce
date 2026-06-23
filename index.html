@@ -121,18 +121,18 @@ section{padding:100px 6%;}
 .prod-badge{position:absolute;top:14px;left:14px;z-index:3;background:var(--grad-gold2);color:var(--black);font-size:0.62rem;font-weight:800;padding:5px 14px;letter-spacing:0.1em;text-transform:uppercase;}
 
 /* IMAGE SLIDER */
-.prod-slider{width:100%;height:280px;background:var(--black4);overflow:hidden;position:relative;}
-.prod-slides{display:flex;height:100%;transition:transform 0.4s ease;}
-.prod-slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:10px;}
-.prod-slide img{width:100%;height:100%;object-fit:contain;}
-.slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem;transition:all 0.2s;opacity:0;}
-.prod-card:hover .slider-btn{opacity:1;}
+.prod-slider{width:100%;height:300px;background:var(--black4);overflow:hidden;position:relative;border-bottom:1px solid var(--border);}
+.prod-slides{display:flex;height:100%;transition:transform 0.35s ease;will-change:transform;}
+.prod-slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--black4);}
+.prod-slide img{width:100%;height:100%;object-fit:contain;padding:12px;}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:rgba(10,10,10,0.82);border:1px solid var(--gold);color:var(--gold);width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;transition:all 0.2s;opacity:1;}
 .slider-btn:hover{background:var(--gold);color:var(--black);}
 .slider-btn.prev{left:8px;}
 .slider-btn.next{right:8px;}
-.slider-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;}
-.slider-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:all 0.2s;}
-.slider-dot.active{background:var(--gold);width:16px;border-radius:3px;}
+.slider-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2;}
+.slider-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer;transition:all 0.25s;border:1px solid rgba(201,168,76,0.3);}
+.slider-dot.active{background:var(--gold);width:20px;border-radius:4px;}
+.slide-counter{position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.65);color:var(--gold);font-size:0.65rem;font-weight:700;padding:3px 8px;letter-spacing:0.08em;z-index:2;}
 
 /* PRODUCT BODY */
 .prod-body{padding:1.4rem;}
@@ -156,8 +156,8 @@ section{padding:100px 6%;}
 #bundle{background:var(--black);position:relative;overflow:hidden;}
 #bundle::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.05) 0%,transparent 70%);}
 .bundle-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;}
-.bundle-img-wrap{border:1px solid var(--border);position:relative;height:400px;background:var(--black3);overflow:hidden;}
-.bundle-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.bundle-img-wrap{border:1px solid var(--border);position:relative;height:500px;background:var(--black3);overflow:hidden;}
+.bundle-img-wrap img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform 0.5s;}
 .bundle-img-wrap:hover img{transform:scale(1.04);}
 .bundle-tag{font-size:0.68rem;color:var(--gold);letter-spacing:0.25em;text-transform:uppercase;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
 .bundle-tag::after{content:'';flex:1;height:1px;background:var(--border);}
@@ -457,7 +457,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
         <div class="prod-slides" id="slides-fw">
           <div class="prod-slide"><img src="glutawol facewash.jpeg" alt="Face Wash Front"></div>
           <div class="prod-slide"><img src="glutawol facewash side.jpeg" alt="Face Wash Side"></div>
-          <div class="prod-slide"><img src="glutawol facewash back.jpeg" alt="Face Wash Back"></div>
+          <div class="prod-slide"><img src="glutawol facewash packaging.jpeg" alt="Face Wash Packaging"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('fw',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('fw',1)">&#8250;</button>
@@ -466,6 +466,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="slider-dot" onclick="goSlide('fw',1)"></div>
           <div class="slider-dot" onclick="goSlide('fw',2)"></div>
         </div>
+        <div class="slide-counter" id="counter-fw">1 / 3</div>
       </div>
       <div class="prod-body">
         <div class="prod-category">Cleanser</div>
@@ -493,7 +494,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
         <div class="prod-slides" id="slides-sr">
           <div class="prod-slide"><img src="glutawol serum.jpeg" alt="Serum Front"></div>
           <div class="prod-slide"><img src="glutawol serum side.jpeg" alt="Serum Side"></div>
-          <div class="prod-slide"><img src="glutawol serum back.jpeg" alt="Serum Back"></div>
+          <div class="prod-slide"><img src="glutawol serum packaging.jpeg" alt="Serum Packaging"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('sr',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('sr',1)">&#8250;</button>
@@ -502,6 +503,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="slider-dot" onclick="goSlide('sr',1)"></div>
           <div class="slider-dot" onclick="goSlide('sr',2)"></div>
         </div>
+        <div class="slide-counter" id="counter-sr">1 / 3</div>
       </div>
       <div class="prod-body">
         <div class="prod-category">Treatment</div>
@@ -529,7 +531,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
         <div class="prod-slides" id="slides-cr">
           <div class="prod-slide"><img src="glutawol cream.jpeg" alt="Cream Front"></div>
           <div class="prod-slide"><img src="glutawol cream side.jpeg" alt="Cream Side"></div>
-          <div class="prod-slide"><img src="glutawol cream back.jpeg" alt="Cream Back"></div>
+          <div class="prod-slide"><img src="glutawol cream packaging.jpeg" alt="Cream Packaging"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('cr',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('cr',1)">&#8250;</button>
@@ -538,6 +540,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="slider-dot" onclick="goSlide('cr',1)"></div>
           <div class="slider-dot" onclick="goSlide('cr',2)"></div>
         </div>
+        <div class="slide-counter" id="counter-cr">1 / 3</div>
       </div>
       <div class="prod-body">
         <div class="prod-category">Moisturizer</div>
@@ -565,7 +568,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
         <div class="prod-slides" id="slides-sp">
           <div class="prod-slide"><img src="glutawol soap.jpeg" alt="Soap Front"></div>
           <div class="prod-slide"><img src="glutawol soap side.jpeg" alt="Soap Side"></div>
-          <div class="prod-slide"><img src="glutawol soap back.jpeg" alt="Soap Back"></div>
+          <div class="prod-slide"><img src="glutawol soap packaging.jpeg" alt="Soap Packaging"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('sp',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('sp',1)">&#8250;</button>
@@ -574,6 +577,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="slider-dot" onclick="goSlide('sp',1)"></div>
           <div class="slider-dot" onclick="goSlide('sp',2)"></div>
         </div>
+        <div class="slide-counter" id="counter-sp">1 / 3</div>
       </div>
       <div class="prod-body">
         <div class="prod-category">Cleanser</div>
@@ -860,7 +864,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 <div class="toast" id="toast"></div>
 
 <script>
-// SLIDER
+// SLIDER - manual only, no auto-slide
 const sliderState = {fw:0, sr:0, cr:0, sp:0};
 function slideImg(id, dir) {
   const slides = document.getElementById('slides-'+id);
@@ -870,10 +874,26 @@ function slideImg(id, dir) {
 }
 function goSlide(id, idx) { sliderState[id]=idx; updateSlider(id); }
 function updateSlider(id) {
-  document.getElementById('slides-'+id).style.transform = `translateX(-${sliderState[id]*100}%)`;
-  document.querySelectorAll(`#dots-${id} .slider-dot`).forEach((d,i)=>d.classList.toggle('active',i===sliderState[id]));
+  const idx = sliderState[id];
+  const slides = document.getElementById('slides-'+id);
+  const count = slides.children.length;
+  slides.style.transform = `translateX(-${idx*100}%)`;
+  document.querySelectorAll(`#dots-${id} .slider-dot`).forEach((d,i)=>d.classList.toggle('active',i===idx));
+  const counter = document.getElementById('counter-'+id);
+  if(counter) counter.textContent = `${idx+1} / ${count}`;
 }
-setInterval(()=>{ Object.keys(sliderState).forEach(id=>slideImg(id,1)); }, 3500);
+
+// Touch swipe support
+function addSwipe(id) {
+  const slider = document.getElementById('slides-'+id).parentElement;
+  let startX = 0;
+  slider.addEventListener('touchstart', e=>{ startX = e.touches[0].clientX; }, {passive:true});
+  slider.addEventListener('touchend', e=>{
+    const diff = startX - e.changedTouches[0].clientX;
+    if(Math.abs(diff) > 40) slideImg(id, diff > 0 ? 1 : -1);
+  }, {passive:true});
+}
+['fw','sr','cr','sp'].forEach(addSwipe);
 
 // REVEAL
 const obs = new IntersectionObserver(entries=>{
