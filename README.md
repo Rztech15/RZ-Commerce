@@ -1,32 +1,124 @@
-# 🛒 RZ Commerce - Premium Glutawol Skincare Landing Page
+# 🛍️ RZ Commerce — Premium Glutawol Skincare Store
 
-Welcome to the official repository of **RZ Commerce**, a high-conversion, premium, single-page e-commerce website specifically designed for marketing and selling the **Glutawol Skincare** collection in Pakistan. 
+> Pakistan's trusted online store for authentic **Glutawol Skincare** products. Built with pure HTML, CSS & JavaScript — fast, responsive, and conversion-optimized.
 
-This project features a luxury dark-themed UI, fully responsive product catalogs, dynamic cart functionality, and direct lead generation pathways via WhatsApp and interactive checkout forms.
+![RZ Commerce](rz%20commerce%20glutawol%20banner.jpeg)
+
+---
+
+## 🌐 Live Website
+
+👉 **[rztech15.github.io/RZ-Commerce](https://rztech15.github.io/RZ-Commerce)**
 
 ---
 
 ## ✨ Features
 
-- **💎 Luxury Visual Architecture:** Built using high-end UI patterns with a dark theme, custom gold gradients, and clean typography (`Playfair Display` & `Inter`).
-- **🛍️ Dynamic Cart Matrix:** Fully functional custom JavaScript cart that allows users to add/remove products and adjust quantities dynamically.
-- **💬 One-Click WhatsApp Checkout:** Automated message generator that serializes the cart items and routes the customer directly to WhatsApp with a pre-filled order invoice.
-- **📦 Formspree Lead Sync:** Integrated serverless backend form processing to capture customer delivery addresses securely.
-- **⚡ Advanced On-Page SEO:** Complete setup with semantic HTML5 tags, optimized Meta descriptions, keywords, and Open Graph (OG) tags for high-visibility sharing on WhatsApp, Facebook, and Instagram.
-- **📱 Fully Responsive:** Optimized flawlessly for mobile screens, tablets, and desktop devices.
+- 🛒 **Add to Cart** — fully functional cart with quantity management
+- 💬 **WhatsApp Checkout** — order summary sent directly to WhatsApp
+- 🖼️ **3-Image Product Slider** — manual swipe/click, touch support on mobile
+- ⭐ **Customer Reviews** — with like/helpful system (localStorage)
+- 📝 **Live Feedback System** — customers can submit star-rated reviews
+- 📦 **Bundle Offer Section** — complete pack with discount pricing
+- 📱 **Fully Responsive** — optimized for mobile, tablet & desktop
+- 🎨 **Premium Dark UI** — gold & black luxury design theme
+- 🔍 **SEO Optimized** — meta tags, OG tags, canonical URL
+- 🌟 **Scroll Reveal Animations** — smooth entrance effects
+- 💵 **Cash on Delivery** — prominently displayed trust signal
+- 📋 **Order Form** — integrated with Formspree for email notifications
 
 ---
 
-## 📂 Project Structure
+## 🧴 Products
 
-```text
-├── Images/
-│   ├── rz-commerce-logo.png          # Main Brand Identity
-│   ├── glutawol-skincare-banner.jpg   # High-Res Hero Campaign Banner
-│   ├── glutawol-skincare-bundle.jpg   # Special Bundle Package Visual
-│   ├── glutawol-face-wash.jpg         # Product 1 Main Image
-│   ├── glutawol-serum.jpg             # Product 2 Main Image
-│   ├── glutawol-cream.jpg             # Product 3 Main Image
-│   └── glutawol-soap.jpg              # Product 4 Main Image
-├── index.html                         # Production HTML/CSS/JS Source Code
-└── README.md                          # Repository Documentation
+| Product | Price |
+|--------|-------|
+| Glutawol Face Wash | Rs. 1,500 |
+| Glutawol Whitening Serum | Rs. 3,500 |
+| Glutawol Cream | Rs. 1,200 |
+| Glutawol Soap | Rs. 1,200 |
+| **Complete Bundle Pack** | **Rs. 6,700** *(Save Rs. 700)* |
+
+---
+
+## 📁 Project Structure
+
+```
+RZ-Commerce/
+├── index.html                        # Main website file
+├── rz commerce logo.jpeg             # Brand logo
+├── rz commerce glutawol banner.jpeg  # Hero banner
+├── glutawol facewash.jpeg            # Face wash front
+├── glutawol facewash side.jpeg       # Face wash side
+├── glutawol facewash packaging.jpeg  # Face wash packaging
+├── glutawol serum.jpeg               # Serum front
+├── glutawol serum side.jpeg          # Serum side
+├── glutawol serum packaging.jpeg     # Serum packaging
+├── glutawol cream.jpeg               # Cream front
+├── glutawol cream side.jpeg          # Cream side
+├── glutawol cream packaging.jpeg     # Cream packaging
+├── glutawol soap.jpeg                # Soap front
+├── glutawol soap side.jpeg           # Soap side
+├── glutawol soap packaging.jpeg      # Soap packaging
+├── glutawol skincare bundle.jpeg     # Bundle pack image
+└── README.md                         # This file
+```
+
+---
+
+## 🚀 Tech Stack
+
+- **HTML5** — semantic structure
+- **CSS3** — custom properties, grid, flexbox, animations
+- **Vanilla JavaScript** — cart, slider, feedback, localStorage
+- **Google Fonts** — Inter + Playfair Display
+- **Formspree** — order form email integration
+- **GitHub Pages** — free hosting & deployment
+
+---
+
+## 📦 Deployment
+
+This site is deployed via **GitHub Pages** from the `main` branch.
+
+To deploy your own copy:
+
+```bash
+# 1. Fork this repo
+# 2. Go to Settings → Pages
+# 3. Source: Deploy from branch → main → / (root)
+# 4. Save — site will be live in ~60 seconds
+```
+
+---
+
+## 📞 Contact & Order
+
+| Channel | Details |
+|---------|---------|
+| 📱 WhatsApp | [0320-7895540](https://wa.me/923207895540) |
+| 📧 Email | ramzanbalochmrbaloch@gmail.com |
+| 📍 Location | Multan, Pakistan |
+| 🕐 Hours | Mon–Sat, 9am–9pm |
+
+---
+
+## 👨‍💻 Developer
+
+**Ramzan Baloch**
+- 🌐 Portfolio: *[your-portfolio-link]*
+- 💼 GitHub: [@rztech15](https://github.com/rztech15)
+
+---
+
+## 📄 License
+
+© 2026 **RZ Commerce** — All Rights Reserved.  
+This project is proprietary. Do not copy or redistribute without permission.
+
+---
+
+<div align="center">
+  <strong>🌟 If you like this project, give it a star! 🌟</strong><br><br>
+  Made with ❤️ in Multan, Pakistan
+</div>
