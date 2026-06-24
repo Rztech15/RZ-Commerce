@@ -20,13 +20,81 @@
 <meta property="twitter:description" content="Authentic Glutawol skincare. Cash on Delivery across Pakistan.">
 <meta property="twitter:image" content="rz commerce glutawol banner.jpeg">
 
+<!-- GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-911C2PF2ZC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-911C2PF2ZC');
+</script>
+
+<!-- BING WEBMASTER TOOLS -->
+<meta name="msvalidate.01" content="824F5776D47E1744AE98D87A5CEFF7F1">
+
 <!-- FAVICON -->
 <link rel="icon" type="image/jpeg" href="rz commerce logo.jpeg">
 <link rel="apple-touch-icon" href="rz commerce logo.jpeg">
 
-<!-- STRUCTURED DATA -->
+<!-- STRUCTURED DATA — Store + Products + Reviews -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Store","name":"RZ Commerce","url":"https://rzcommerce.online","logo":"https://rzcommerce.online/rz commerce logo.jpeg","description":"Pakistan ka trusted Glutawol skincare store.","address":{"@type":"PostalAddress","addressLocality":"Multan","addressCountry":"PK"},"telephone":"+923207895540","email":"ramzanbalochmrbaloch@gmail.com","sameAs":["https://www.facebook.com/share/1DP9WeSLY3/","https://www.instagram.com/rzcommerce.store"]}
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Store",
+      "name":"RZ Commerce",
+      "url":"https://rzcommerce.online",
+      "logo":"https://rzcommerce.online/rz%20commerce%20logo.jpeg",
+      "description":"Pakistan ka trusted Glutawol skincare store. Authentic products, fast delivery, Cash on Delivery.",
+      "address":{"@type":"PostalAddress","addressLocality":"Multan","addressCountry":"PK"},
+      "telephone":"+923207895540",
+      "email":"ramzanbalochmrbaloch@gmail.com",
+      "openingHours":"Mo-Sa 09:00-21:00",
+      "sameAs":["https://www.facebook.com/share/1DP9WeSLY3/","https://www.instagram.com/rzcommerce.store"]
+    },
+    {
+      "@type":"Product",
+      "name":"Glutawol Face Wash",
+      "description":"Whitening Deep Cleansing Formula with Glutathione for bright, radiant skin. Pakistan.",
+      "image":"https://rzcommerce.online/glutawol%20facewash.jpeg",
+      "brand":{"@type":"Brand","name":"Glutawol"},
+      "offers":{"@type":"Offer","price":"1500","priceCurrency":"PKR","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"RZ Commerce"}}
+    },
+    {
+      "@type":"Product",
+      "name":"Glutawol Whitening Serum",
+      "description":"Brightening Serum with Glutathione, Vitamin C & Hyaluronic Acid. Pakistan.",
+      "image":"https://rzcommerce.online/glutawol%20serum.jpeg",
+      "brand":{"@type":"Brand","name":"Glutawol"},
+      "offers":{"@type":"Offer","price":"3500","priceCurrency":"PKR","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"RZ Commerce"}}
+    },
+    {
+      "@type":"Product",
+      "name":"Glutawol Cream",
+      "description":"Whitening Daily Moisturizing Care with Glutathione for glowing skin. Pakistan.",
+      "image":"https://rzcommerce.online/glutawol%20cream.jpeg",
+      "brand":{"@type":"Brand","name":"Glutawol"},
+      "offers":{"@type":"Offer","price":"1200","priceCurrency":"PKR","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"RZ Commerce"}}
+    },
+    {
+      "@type":"Product",
+      "name":"Glutawol Soap",
+      "description":"Whitening Gentle Skin Cleansing Soap with Glutathione. Pakistan.",
+      "image":"https://rzcommerce.online/glutawol%20soap.jpeg",
+      "brand":{"@type":"Brand","name":"Glutawol"},
+      "offers":{"@type":"Offer","price":"1200","priceCurrency":"PKR","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"RZ Commerce"}}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Is Cash on Delivery available?","acceptedAnswer":{"@type":"Answer","text":"Haan! RZ Commerce pe Cash on Delivery available hai poore Pakistan mein."}},
+        {"@type":"Question","name":"How long does delivery take?","acceptedAnswer":{"@type":"Answer","text":"2-3 business days mein delivery ho jati hai order confirm hone ke baad."}},
+        {"@type":"Question","name":"Are Glutawol products authentic?","acceptedAnswer":{"@type":"Answer","text":"Haan, 100% authentic Glutawol products hain verified suppliers se."}}
+      ]
+    }
+  ]
+}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -318,6 +386,16 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
 
 /* MOBILE */
+/* FAQ */
+.faq-item{border:1px solid var(--border);margin-bottom:2px;background:var(--black3);}
+.faq-q{width:100%;background:none;border:none;padding:1.2rem 1.5rem;color:var(--white);font-size:0.9rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;text-align:left;transition:background 0.2s;font-family:'Inter',sans-serif;}
+.faq-q:hover{background:rgba(201,168,76,0.05);}
+.faq-q.open{color:var(--gold);}
+.faq-icon{font-size:1.3rem;color:var(--gold);flex-shrink:0;transition:transform 0.3s;margin-left:1rem;}
+.faq-q.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;padding:0 1.5rem;color:var(--gray);font-size:0.86rem;line-height:1.8;}
+.faq-a.open{max-height:200px;padding:0.8rem 1.5rem 1.2rem;}
+
 @media(max-width:900px){
   .bundle-wrap{grid-template-columns:1fr;gap:3rem;}
   .contact-wrap{grid-template-columns:1fr;gap:3rem;}
@@ -388,7 +466,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
     <a href="#about-us">About</a>
     <a href="#bundle">Bundle</a>
     <a href="#reviews">Reviews</a>
-    <a href="#feedback">Feedback</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
@@ -403,7 +481,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 <!-- HERO -->
 <section id="home">
   <div class="hero-banner">
-    <img src="rz commerce glutawol banner.jpeg" alt="Glutawol Banner">
+    <img src="rz commerce glutawol banner.jpeg" alt="RZ Commerce Glutawol Premium Skincare Pakistan Banner" loading="eager">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -462,9 +540,9 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-badge">Bestseller</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-fw">
-          <div class="prod-slide"><img src="glutawol facewash.jpeg" alt="Face Wash Front"></div>
-          <div class="prod-slide"><img src="glutawol facewash side.jpeg" alt="Face Wash Side"></div>
-          <div class="prod-slide"><img src="glutawol facewash packaging.jpeg" alt="Face Wash Packaging"></div>
+          <div class="prod-slide"><img src="glutawol facewash.jpeg" alt="Glutawol Face Wash Whitening Deep Cleansing Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol facewash side.jpeg" alt="Glutawol Face Wash Side View Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol facewash packaging.jpeg" alt="Glutawol Face Wash Packaging Box Pakistan" loading="lazy"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('fw',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('fw',1)">&#8250;</button>
@@ -499,9 +577,9 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-badge" style="background:linear-gradient(90deg,#b8860b,#daa520)">⭐ Top Pick</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-sr">
-          <div class="prod-slide"><img src="glutawol serum.jpeg" alt="Serum Front"></div>
-          <div class="prod-slide"><img src="glutawol serum side.jpeg" alt="Serum Side"></div>
-          <div class="prod-slide"><img src="glutawol serum packaging.jpeg" alt="Serum Packaging"></div>
+          <div class="prod-slide"><img src="glutawol serum.jpeg" alt="Glutawol Whitening Brightening Serum Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol serum side.jpeg" alt="Glutawol Serum Side View Glutathione Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol serum packaging.jpeg" alt="Glutawol Serum Packaging Box Pakistan" loading="lazy"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('sr',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('sr',1)">&#8250;</button>
@@ -536,9 +614,9 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-badge">Smooth Care</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-cr">
-          <div class="prod-slide"><img src="glutawol cream.jpeg" alt="Cream Front"></div>
-          <div class="prod-slide"><img src="glutawol cream side.jpeg" alt="Cream Side"></div>
-          <div class="prod-slide"><img src="glutawol cream packaging.jpeg" alt="Cream Packaging"></div>
+          <div class="prod-slide"><img src="glutawol cream.jpeg" alt="Glutawol Whitening Moisturizing Cream Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol cream side.jpeg" alt="Glutawol Cream Side View Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol cream packaging.jpeg" alt="Glutawol Cream Packaging Box Pakistan" loading="lazy"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('cr',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('cr',1)">&#8250;</button>
@@ -573,9 +651,9 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-badge">Gentle Cleansing</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-sp">
-          <div class="prod-slide"><img src="glutawol soap.jpeg" alt="Soap Front"></div>
-          <div class="prod-slide"><img src="glutawol soap side.jpeg" alt="Soap Side"></div>
-          <div class="prod-slide"><img src="glutawol soap packaging.jpeg" alt="Soap Packaging"></div>
+          <div class="prod-slide"><img src="glutawol soap.jpeg" alt="Glutawol Whitening Gentle Cleansing Soap Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol soap side.jpeg" alt="Glutawol Soap Side View Pakistan" loading="lazy"></div>
+          <div class="prod-slide"><img src="glutawol soap packaging.jpeg" alt="Glutawol Soap Packaging Box Pakistan" loading="lazy"></div>
         </div>
         <button class="slider-btn prev" onclick="slideImg('sp',-1)">&#8249;</button>
         <button class="slider-btn next" onclick="slideImg('sp',1)">&#8250;</button>
@@ -612,7 +690,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 <section id="bundle">
   <div class="bundle-wrap">
     <div class="bundle-img-wrap reveal">
-      <img src="glutawol skincare bundle.jpeg" alt="Glutawol Bundle Pack">
+      <img src="glutawol skincare bundle.jpeg" alt="Glutawol Complete Skincare Bundle Pack Pakistan - Face Wash Serum Cream Soap" loading="lazy">
     </div>
     <div class="bundle-details reveal">
       <div class="bundle-tag">✦ Special Offer</div>
@@ -748,6 +826,67 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
     </div>
   </div>
   <div id="liveFeedbackGrid" class="live-feedback-grid"></div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" style="background:var(--black);">
+  <div class="sec-header reveal">
+    <div class="sec-tag">FAQ</div>
+    <h2 class="sec-title">Frequently Asked <span>Questions</span></h2>
+    <p class="sec-sub">Aapke common sawalat ke jawab — ek click mein!</p>
+  </div>
+  <div style="max-width:750px;margin:0 auto;" class="reveal">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>💵 Is Cash on Delivery available?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Haan! Poore Pakistan mein Cash on Delivery available hai. Pehle product receive karo, phir payment karo. Bilkul safe!</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>🚚 Delivery kitne din mein hogi?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Order confirm hone ke baad 2-3 business days mein delivery ho jati hai. Confirmation WhatsApp pe milegi.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>💰 Delivery charges kitne hain?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Delivery charges aapki city aur location ke hisaab se vary karte hain. Exact charges ke liye WhatsApp pe contact karein. Rs. 10,000+ ke order pe FREE delivery!</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>✅ Kya Glutawol products authentic hain?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Haan! 100% authentic Glutawol products hain — directly verified suppliers se sourced. Koi duplicate ya fake product nahi.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>↩️ Return ya refund ho sakta hai?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Haan! Agar product damaged, defective ya galat aaya ho toh 7 din ke andar return le sakte hain. WhatsApp pe 0320-7895540 pe contact karein.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>🌿 Kya yeh products safe hain?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Haan! Glutawol products dermatologically tested hain aur sab skin types ke liye suitable hain. Glutathione, Vitamin C aur natural ingredients use hote hain.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>📦 Bundle pack mein kya kya hai?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Complete Bundle mein Face Wash, Serum, Cream aur Soap — sab kuch ek saath milta hai Rs. 6,700 mein. Alag alag khareedne se Rs. 700 ki bachat!</div>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -1104,6 +1243,14 @@ window.addEventListener('DOMContentLoaded',()=>{
   });
   loadFeedback();
 });
+
+// FAQ
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const isOpen=answer.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(a=>{a.classList.remove('open');a.previousElementSibling.classList.remove('open');});
+  if(!isOpen){answer.classList.add('open');btn.classList.add('open');}
+}
 
 // ORDER FORM
 document.getElementById('orderForm').addEventListener('submit',async function(e){
