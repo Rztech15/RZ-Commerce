@@ -779,10 +779,10 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 <!-- BUNDLE -->
 <section id="bundle">
   <div class="bundle-wrap">
-    <div class="bundle-img-wrap reveal">
+    <div class="bundle-img-wrap">
       <img src="glutawol skincare bundle.jpeg" alt="Glutawol Complete Skincare Bundle Pack Pakistan - Face Wash Serum Cream Soap" loading="lazy">
     </div>
-    <div class="bundle-details reveal">
+    <div class="bundle-details">
       <div class="bundle-tag">✦ Special Offer</div>
       <h2 class="bundle-title">Complete Glutawol<br><span>Bundle Pack</span></h2>
       <p class="bundle-desc">Poora skincare routine ek bundle mein — special discount ke saath. Glow karo daily!</p>
@@ -920,12 +920,12 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 
 <!-- FAQ SECTION -->
 <section id="faq" style="background:var(--black);">
-  <div class="sec-header reveal">
+  <div class="sec-header">
     <div class="sec-tag">FAQ</div>
     <h2 class="sec-title">Frequently Asked <span>Questions</span></h2>
     <p class="sec-sub">Aapke common sawalat ke jawab — ek click mein!</p>
   </div>
-  <div style="max-width:750px;margin:0 auto;" class="reveal">
+  <div style="max-width:750px;margin:0 auto;">
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
@@ -1051,13 +1051,13 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 
 <!-- ABOUT US -->
 <section id="about-us" style="background:var(--black);">
-  <div class="sec-header reveal">
+  <div class="sec-header">
     <div class="sec-tag">Our Story</div>
     <h2 class="sec-title">About <span>RZ Commerce</span></h2>
     <p class="sec-sub">From a Mathematics classroom in Multan to building Pakistan's own skincare brand online.</p>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:1rem;" class="about-us-wrap">
-    <div class="reveal" style="background:var(--black3);border:1px solid var(--border);padding:2.5rem;">
+    <div style="background:var(--black3);border:1px solid var(--border);padding:2.5rem;">
       <div style="font-size:3rem;margin-bottom:1rem;">👑</div>
       <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:1rem;">Ramzan Baloch</h3>
       <p style="font-size:0.78rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;font-weight:600;margin-bottom:1.5rem;">Founder, RZ Commerce</p>
@@ -1066,7 +1066,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
         <a href="https://www.instagram.com/rzcommerce.store" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;padding:8px 16px;font-size:0.75rem;font-weight:700;text-decoration:none;">📸 Instagram</a>
       </div>
     </div>
-    <div class="reveal">
+    <div>
       <p style="font-size:0.95rem;color:rgba(255,255,255,0.82);line-height:2;margin-bottom:1.2rem;">My name is <strong style="color:var(--gold);">Ramzan Baloch</strong> — a BS Mathematics student at BZU Multan, and the founder of RZ Commerce.</p>
       <p style="font-size:0.92rem;color:var(--gray);line-height:2;margin-bottom:1.2rem;">This journey didn't start with money or resources. It started with a laptop, late nights, and a burning desire to learn. While studying complex equations during the day, I was teaching myself web development at night — HTML, CSS, JavaScript — one tutorial at a time, one error at a time.</p>
       <p style="font-size:0.92rem;color:var(--gray);line-height:2;margin-bottom:1.2rem;">I chose Glutawol because I believe every Pakistani deserves access to quality, authentic skincare — without overpaying or getting fooled by fake products. My mission is simple: <strong style="color:var(--white);">deliver trust, deliver glow.</strong></p>
@@ -1606,4 +1606,5 @@ const legalPages={
 function showLegal(type){
   event.preventDefault();
   document.getElementById('legalContent').innerHTML=legalPages[type];
-  document
+  document.getElementById('legalModal').style.display='block';
+  document.body.styl
