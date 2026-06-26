@@ -187,7 +187,7 @@ section{padding:100px 6%;}
 .filter-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:3rem;justify-content:center;}
 .filter-btn{padding:8px 20px;font-size:0.72rem;font-weight:700;cursor:pointer;border:1px solid var(--border);background:transparent;color:rgba(255,255,255,0.7);letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;}
 .filter-btn.active,.filter-btn:hover{background:var(--gold);color:var(--black);border-color:var(--gold);}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2px;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2px;opacity:1;visibility:visible;}
 
 /* PRODUCT CARD */
 .prod-card{background:var(--black3);border:1px solid var(--border);transition:border-color 0.3s,transform 0.3s;position:relative;}
@@ -622,7 +622,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
   <div class="products-grid">
 
     <!-- FACE WASH -->
-    <div class="prod-card reveal" data-category="cleanser">
+    <div class="prod-card" data-category="cleanser">
       <div class="prod-badge">Bestseller</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-fw">
@@ -660,7 +660,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
     </div>
 
     <!-- SERUM -->
-    <div class="prod-card reveal" data-category="treatment">
+    <div class="prod-card" data-category="treatment">
       <div class="prod-badge" style="background:linear-gradient(90deg,#b8860b,#daa520)">⭐ Top Pick</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-sr">
@@ -698,7 +698,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
     </div>
 
     <!-- CREAM -->
-    <div class="prod-card reveal" data-category="moisturizer">
+    <div class="prod-card" data-category="moisturizer">
       <div class="prod-badge">Smooth Care</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-cr">
@@ -736,7 +736,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
     </div>
 
     <!-- SOAP -->
-    <div class="prod-card reveal" data-category="cleanser">
+    <div class="prod-card" data-category="cleanser">
       <div class="prod-badge">Gentle Cleansing</div>
       <div class="prod-slider">
         <div class="prod-slides" id="slides-sp">
@@ -1606,4 +1606,4 @@ const legalPages={
 function showLegal(type){
   event.preventDefault();
   document.getElementById('legalContent').innerHTML=legalPages[type];
-  document.
+  document
