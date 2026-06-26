@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RZ Commerce | Premium Glutawol Skincare & Beauty Products Pakistan</title>
-<meta name="description" content="Shop 100% authentic Glutawol Skincare at RZ Commerce. Glutawol Face Wash, Serum, Cream, Soap with Glutathione. Cash on Delivery across Pakistan.">
-<meta name="keywords" content="Glutawol, Glutawol Face Wash, Glutawol Serum, Glutawol Cream, Glutawol Soap, Glutawol Pakistan, RZ Commerce, Glutathione Skincare, Skin Brightening, COD Pakistan">
+<title>RZ Commerce | Premium Glutawol Skincare Pakistan - Authentic & COD</title>
+<meta name="description" content="Pakistan ka #1 Glutawol store. Authentic Glutathione face wash, serum, cream & soap - Cash on Delivery poore Pakistan mein. 500+ happy customers. Order karein aaj!">
+<meta name="keywords" content="Glutawol Pakistan, Glutathione face wash Pakistan, whitening serum Pakistan COD, Glutawol serum price Pakistan, authentic Glutawol online, Glutawol cream Pakistan, Glutawol soap Pakistan, RZ Commerce, skincare Pakistan COD">
 <meta name="robots" content="index, follow">
 <meta name="author" content="RZ Commerce">
-<link rel="canonical" href="https://rzcommerce.online">
+<link rel="canonical" href="https://rzcommerce.online/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rzcommerce.online">
-<meta property="og:title" content="RZ Commerce | Premium Glutawol Skincare Pakistan">
-<meta property="og:description" content="Get glowing skin with Glutawol. Cash on Delivery. 500+ Happy Customers.">
-<meta property="og:image" content="rz commerce glutawol banner.jpeg">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://rzcommerce.online">
-<meta property="twitter:title" content="RZ Commerce | Premium Glutawol Skincare">
-<meta property="twitter:description" content="Authentic Glutawol skincare. Cash on Delivery across Pakistan.">
-<meta property="twitter:image" content="rz commerce glutawol banner.jpeg">
+<meta property="og:url" content="https://rzcommerce.online/">
+<meta property="og:title" content="RZ Commerce | Premium Glutawol Skincare Pakistan - Authentic & COD">
+<meta property="og:description" content="Pakistan ka #1 Glutawol store. Authentic Glutathione face wash, serum, cream & soap. Cash on Delivery poore Pakistan mein. 500+ happy customers!">
+<meta property="og:image" content="https://rzcommerce.online/rz%20commerce%20glutawol%20banner.jpeg">
+<meta property="og:locale" content="en_PK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://rzcommerce.online/">
+<meta name="twitter:title" content="RZ Commerce | Premium Glutawol Skincare Pakistan">
+<meta name="twitter:description" content="Authentic Glutawol skincare — Cash on Delivery across Pakistan. 500+ happy customers!">
+<meta name="twitter:image" content="https://rzcommerce.online/rz%20commerce%20glutawol%20banner.jpeg">
 
 <!-- GOOGLE ANALYTICS 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-911C2PF2ZC"></script>
@@ -139,7 +140,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .cart-count{position:absolute;top:-7px;right:-7px;background:var(--white);color:var(--black);width:20px;height:20px;border-radius:50%;font-size:0.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;}
 
 /* ── HERO ── */
-#home{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;}
+#home{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;padding-top:110px;}
 .hero-banner{position:absolute;inset:0;background:var(--black);}
 .hero-banner img{width:100%;height:100%;object-fit:cover;opacity:0.65;filter:brightness(1.15) contrast(1.1) saturate(1.2);}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.88) 40%,rgba(0,0,0,0.2) 100%);}
@@ -386,7 +387,46 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
 
 /* MOBILE */
-/* FAQ */
+/* LIVE TICKER */
+.live-ticker{background:var(--gold);overflow:hidden;padding:8px 0;white-space:nowrap;position:fixed;top:74px;left:0;right:0;z-index:999;}
+.ticker-track{display:inline-flex;gap:0;animation:ticker 35s linear infinite;}
+.ticker-track span{padding:0 2.5rem;font-size:0.75rem;font-weight:700;color:var(--black);letter-spacing:0.05em;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.live-ticker:hover .ticker-track{animation-play-state:paused;}
+
+/* PRODUCT MODAL */
+.prod-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:5000;overflow-y:auto;padding:1rem;}
+.prod-modal-overlay.open{display:flex;align-items:flex-start;justify-content:center;}
+.prod-modal{background:var(--black2);border:1px solid var(--border);width:100%;max-width:900px;margin:2rem auto;position:relative;animation:modalIn 0.3s ease;}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.prod-modal-close{position:absolute;top:1rem;right:1rem;background:none;border:1px solid var(--border);color:var(--gray);width:36px;height:36px;cursor:pointer;font-size:1rem;z-index:2;transition:all 0.2s;}
+.prod-modal-close:hover{border-color:var(--gold);color:var(--gold);}
+.prod-modal-body{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.prod-modal-imgs{background:#e2ccaa;position:relative;min-height:350px;}
+.prod-modal-img-main{width:100%;height:350px;object-fit:contain;padding:16px;cursor:zoom-in;}
+.prod-modal-thumbs{display:flex;gap:6px;padding:10px 12px;background:var(--black3);}
+.prod-modal-thumb{width:60px;height:60px;object-fit:contain;background:#e2ccaa;padding:4px;cursor:pointer;border:2px solid transparent;transition:border-color 0.2s;}
+.prod-modal-thumb.active,.prod-modal-thumb:hover{border-color:var(--gold);}
+.prod-modal-info{padding:2rem;display:flex;flex-direction:column;gap:1rem;}
+.prod-modal-category{font-size:0.65rem;color:var(--gold);font-weight:700;letter-spacing:0.15em;text-transform:uppercase;}
+.prod-modal-name{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;color:var(--white);line-height:1.2;}
+.prod-modal-price{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.prod-modal-price-sub{font-size:0.75rem;color:var(--gray);margin-top:2px;}
+.prod-modal-desc{font-size:0.88rem;color:var(--gray);line-height:1.9;border-top:1px solid var(--border);padding-top:1rem;}
+.prod-modal-desc h4{color:var(--white);font-size:0.82rem;margin-bottom:0.5rem;letter-spacing:0.1em;text-transform:uppercase;}
+.prod-modal-desc ul{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.prod-modal-desc ul li{padding-left:1.2rem;position:relative;}
+.prod-modal-desc ul li::before{content:'✦';position:absolute;left:0;color:var(--gold);font-size:0.6rem;top:3px;}
+.prod-modal-features{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.prod-modal-feature{background:rgba(201,168,76,0.08);border:1px solid var(--border);color:var(--gold2);font-size:0.65rem;padding:4px 10px;}
+.prod-modal-btns{display:flex;flex-direction:column;gap:0.6rem;margin-top:auto;}
+.prod-modal-btns .add-cart-btn{width:100%;padding:12px;font-size:0.8rem;justify-content:center;}
+.prod-modal-btns .wa-order-btn{width:100%;padding:12px;font-size:0.8rem;justify-content:center;}
+@media(max-width:650px){
+  .prod-modal-body{grid-template-columns:1fr;}
+  .prod-modal-imgs{min-height:250px;}
+  .prod-modal-img-main{height:250px;}
+}
 .faq-item{border:1px solid var(--border);margin-bottom:2px;background:var(--black3);}
 .faq-q{width:100%;background:none;border:none;padding:1.2rem 1.5rem;color:var(--white);font-size:0.9rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;text-align:left;transition:background 0.2s;font-family:'Inter',sans-serif;}
 .faq-q:hover{background:rgba(201,168,76,0.05);}
@@ -394,7 +434,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 .faq-icon{font-size:1.3rem;color:var(--gold);flex-shrink:0;transition:transform 0.3s;margin-left:1rem;}
 .faq-q.open .faq-icon{transform:rotate(45deg);}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;padding:0 1.5rem;color:var(--gray);font-size:0.86rem;line-height:1.8;}
-.faq-a.open{max-height:200px;padding:0.8rem 1.5rem 1.2rem;}
+.faq-a.open{max-height:400px;padding:0.8rem 1.5rem 1.2rem;}
 
 @media(max-width:900px){
   .bundle-wrap{grid-template-columns:1fr;gap:3rem;}
@@ -427,6 +467,30 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 </style>
 </head>
 <body>
+
+<!-- PRODUCT DETAIL MODAL -->
+<div class="prod-modal-overlay" id="prodModal" onclick="closeProdModal(event)">
+  <div class="prod-modal">
+    <button class="prod-modal-close" onclick="document.getElementById('prodModal').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <div class="prod-modal-body">
+      <div class="prod-modal-imgs">
+        <img class="prod-modal-img-main" id="modalMainImg" src="" alt="" onclick="openZoom(this.src)">
+        <div class="prod-modal-thumbs" id="modalThumbs"></div>
+      </div>
+      <div class="prod-modal-info">
+        <div class="prod-modal-category" id="modalCategory"></div>
+        <div class="prod-modal-name" id="modalName"></div>
+        <div>
+          <div class="prod-modal-price" id="modalPrice"></div>
+          <div class="prod-modal-price-sub">per piece · Cash on Delivery Available</div>
+        </div>
+        <div class="prod-modal-features" id="modalFeatures"></div>
+        <div class="prod-modal-desc" id="modalDesc"></div>
+        <div class="prod-modal-btns" id="modalBtns"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- CART DRAWER -->
 <div class="cart-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
@@ -478,6 +542,28 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
   </div>
 </nav>
 
+<!-- LIVE TICKER -->
+<div class="live-ticker">
+  <div class="ticker-track">
+    <span>✦ FREE Delivery on Rs. 10,000+ orders</span>
+    <span>✦ 100% Authentic Glutawol Products</span>
+    <span>✦ Cash on Delivery Available</span>
+    <span>✦ 500+ Happy Customers</span>
+    <span>✦ Multan Delivery Rs. 150 only</span>
+    <span>✦ Glutawol Serum — Bestseller Pakistan</span>
+    <span>✦ WhatsApp Order: 0320-7895540</span>
+    <span>✦ Nationwide Delivery in 2-3 Days</span>
+    <span>✦ FREE Delivery on Rs. 10,000+ orders</span>
+    <span>✦ 100% Authentic Glutawol Products</span>
+    <span>✦ Cash on Delivery Available</span>
+    <span>✦ 500+ Happy Customers</span>
+    <span>✦ Multan Delivery Rs. 150 only</span>
+    <span>✦ Glutawol Serum — Bestseller Pakistan</span>
+    <span>✦ WhatsApp Order: 0320-7895540</span>
+    <span>✦ Nationwide Delivery in 2-3 Days</span>
+  </div>
+</div>
+
 <!-- HERO -->
 <section id="home">
   <div class="hero-banner">
@@ -485,9 +571,9 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-tag">✦ Premium Glutawol Skincare</div>
+    <div class="hero-tag">✦ Pakistan ka #1 Glutawol Skincare Store</div>
     <h1 class="hero-title">Reveal Your<br><span class="gold">Natural Glow</span></h1>
-    <p class="hero-sub">Pakistan ka #1 Glutawol Skincare store — crafted with Glutathione for brighter, healthier, radiant skin.</p>
+    <p class="hero-sub">Authentic <strong>Glutawol skincare Pakistan</strong> — Glutathione face wash, serum, cream & soap. Cash on Delivery poore Pakistan mein. 500+ khush customers!</p>
 
     <!-- SOCIAL PROOF -->
     <div class="hero-social-proof">
@@ -556,7 +642,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-body">
         <div class="prod-category">Cleanser</div>
         <h3 class="prod-name">Glutawol Face Wash</h3>
-        <div class="prod-subtitle">Whitening Deep Cleansing Formula</div>
+        <div class="prod-subtitle">Whitening Deep Cleansing — Glutathione Formula Pakistan</div>
         <div class="prod-features"><span class="prod-feature">Brighten</span><span class="prod-feature">Refresh</span><span class="prod-feature">Revive</span></div>
         <div class="prod-divider"></div>
         <div class="prod-footer">
@@ -567,6 +653,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="prod-cta-wrap">
             <button class="add-cart-btn" onclick="addToCart('Glutawol Face Wash',1500,'glutawol facewash.jpeg')">🛒 Add to Cart</button>
             <a class="wa-order-btn" href="https://wa.me/923207895540?text=Hi!%20I%20want%20to%20order%20Glutawol%20Face%20Wash%20Rs.1500" target="_blank">💬 Buy Now</a>
+            <button class="add-cart-btn" style="background:transparent;color:var(--gold);border:1px solid var(--gold);" onclick="openProdModal('fw')">🔍 View Details</button>
           </div>
         </div>
       </div>
@@ -593,7 +680,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-body">
         <div class="prod-category">Treatment</div>
         <h3 class="prod-name">Glutawol Serum</h3>
-        <div class="prod-subtitle">Whitening Brightening Serum</div>
+        <div class="prod-subtitle">Brightening Glutathione & Vitamin C Serum Pakistan</div>
         <div class="prod-features"><span class="prod-feature">Brighten</span><span class="prod-feature">Hydrate</span><span class="prod-feature">Repair</span></div>
         <div class="prod-divider"></div>
         <div class="prod-footer">
@@ -604,6 +691,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="prod-cta-wrap">
             <button class="add-cart-btn" onclick="addToCart('Glutawol Serum',3500,'glutawol serum.jpeg')">🛒 Add to Cart</button>
             <a class="wa-order-btn" href="https://wa.me/923207895540?text=Hi!%20I%20want%20to%20order%20Glutawol%20Serum%20Rs.3500" target="_blank">💬 Buy Now</a>
+            <button class="add-cart-btn" style="background:transparent;color:var(--gold);border:1px solid var(--gold);" onclick="openProdModal('sr')">🔍 View Details</button>
           </div>
         </div>
       </div>
@@ -630,7 +718,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-body">
         <div class="prod-category">Moisturizer</div>
         <h3 class="prod-name">Glutawol Cream</h3>
-        <div class="prod-subtitle">Whitening Daily Moisturizing Care</div>
+        <div class="prod-subtitle">Whitening Daily Moisturizing Care — Glutathione Pakistan</div>
         <div class="prod-features"><span class="prod-feature">Brighten</span><span class="prod-feature">Moisturize</span><span class="prod-feature">Protect</span></div>
         <div class="prod-divider"></div>
         <div class="prod-footer">
@@ -641,6 +729,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="prod-cta-wrap">
             <button class="add-cart-btn" onclick="addToCart('Glutawol Cream',1200,'glutawol cream.jpeg')">🛒 Add to Cart</button>
             <a class="wa-order-btn" href="https://wa.me/923207895540?text=Hi!%20I%20want%20to%20order%20Glutawol%20Cream%20Rs.1200" target="_blank">💬 Buy Now</a>
+            <button class="add-cart-btn" style="background:transparent;color:var(--gold);border:1px solid var(--gold);" onclick="openProdModal('cr')">🔍 View Details</button>
           </div>
         </div>
       </div>
@@ -667,7 +756,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <div class="prod-body">
         <div class="prod-category">Cleanser</div>
         <h3 class="prod-name">Glutawol Soap</h3>
-        <div class="prod-subtitle">Whitening Gentle Skin Cleansing</div>
+        <div class="prod-subtitle">Whitening Gentle Glutathione Cleansing Soap Pakistan</div>
         <div class="prod-features"><span class="prod-feature">Brightening</span><span class="prod-feature">Nourishing</span><span class="prod-feature">Gentle</span></div>
         <div class="prod-divider"></div>
         <div class="prod-footer">
@@ -678,6 +767,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
           <div class="prod-cta-wrap">
             <button class="add-cart-btn" onclick="addToCart('Glutawol Soap',1200,'glutawol soap.jpeg')">🛒 Add to Cart</button>
             <a class="wa-order-btn" href="https://wa.me/923207895540?text=Hi!%20I%20want%20to%20order%20Glutawol%20Soap%20Rs.1200" target="_blank">💬 Buy Now</a>
+            <button class="add-cart-btn" style="background:transparent;color:var(--gold);border:1px solid var(--gold);" onclick="openProdModal('sp')">🔍 View Details</button>
           </div>
         </div>
       </div>
@@ -855,7 +945,14 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
       <button class="faq-q" onclick="toggleFaq(this)">
         <span>💰 Delivery charges kitne hain?</span><span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">Delivery charges aapki city aur location ke hisaab se vary karte hain. Exact charges ke liye WhatsApp pe contact karein. Rs. 10,000+ ke order pe FREE delivery!</div>
+      <div class="faq-a">Delivery charges city ke hisaab se fix hain:<br><br>
+        🏙️ Multan — Rs. 150<br>
+        🏙️ Lahore — Rs. 200<br>
+        🏙️ Karachi — Rs. 200<br>
+        🏙️ Islamabad / Rawalpindi — Rs. 200<br>
+        🏙️ Other Cities — Rs. 250<br><br>
+        <strong>Rs. 10,000+ order pe FREE delivery — poore Pakistan mein! 🎁</strong><br><br>
+        Agar aapki city listed nahi — WhatsApp karein: 0320-7895540</div>
     </div>
 
     <div class="faq-item">
@@ -992,8 +1089,14 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
     </div>
     <div style="background:var(--black3);border:1px solid var(--border);padding:2rem;text-align:center;">
       <div style="font-size:2rem;margin-bottom:0.8rem;">💵</div>
-      <h3 style="font-family:'Playfair Display',serif;color:var(--white);margin-bottom:0.5rem;font-size:1rem;">Delivery Charges</h3>
-      <p style="font-size:0.8rem;color:var(--gray);line-height:1.7;">City/location ke hisaab se charges vary karte hain. WhatsApp pe confirm karein.</p>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--white);margin-bottom:0.8rem;font-size:1rem;">Delivery Charges</h3>
+      <p style="font-size:0.8rem;color:var(--gray);line-height:2;">
+        🏙️ Multan — <strong style="color:var(--gold);">Rs. 150</strong><br>
+        🏙️ Lahore — <strong style="color:var(--gold);">Rs. 200</strong><br>
+        🏙️ Karachi — <strong style="color:var(--gold);">Rs. 200</strong><br>
+        🏙️ Islamabad/Rwp — <strong style="color:var(--gold);">Rs. 200</strong><br>
+        🏙️ Other Cities — <strong style="color:var(--gold);">Rs. 250</strong>
+      </p>
     </div>
     <div style="background:var(--black3);border:1px solid var(--border);padding:2rem;text-align:center;">
       <div style="font-size:2rem;margin-bottom:0.8rem;">🎁</div>
@@ -1244,6 +1347,178 @@ window.addEventListener('DOMContentLoaded',()=>{
   loadFeedback();
 });
 
+// PRODUCT DATA
+const products = {
+  fw: {
+    name: 'Glutawol Face Wash',
+    category: 'Cleanser',
+    price: 'Rs. 1,500',
+    cartPrice: 1500,
+    cartImg: 'glutawol facewash.jpeg',
+    waText: 'Hi!%20I%20want%20to%20order%20Glutawol%20Face%20Wash%20Rs.1500',
+    imgs: ['glutawol facewash.jpeg','glutawol facewash side.jpeg','glutawol facewash packaging.jpeg'],
+    features: ['Brighten','Refresh','Revive','Deep Cleanse'],
+    desc: `<h4>About This Product</h4>
+      <p style="margin-bottom:0.8rem;">Glutawol Face Wash ek premium whitening cleanser hai jo Glutathione formula ke saath banaya gaya hai. Yeh aapki skin ko deeply clean karta hai jabke natural glow maintain karta hai.</p>
+      <h4 style="margin-top:1rem;">Key Benefits</h4>
+      <ul>
+        <li>Glutathione formula se skin bright aur even tone hoti hai</li>
+        <li>Deep cleansing — dust, oil aur impurities remove karta hai</li>
+        <li>Gentle formula — sab skin types ke liye suitable</li>
+        <li>Daily use ke liye safe — skin dry nahi hoti</li>
+        <li>Whitening effect — regular use se visible results</li>
+      </ul>
+      <h4 style="margin-top:1rem;">How to Use</h4>
+      <ul>
+        <li>Face ko pani se geela karein</li>
+        <li>Thodi si miqdar leke face pe circular motion mein lagaein</li>
+        <li>30 seconds massage karein</li>
+        <li>Pani se achhi tarah dholen</li>
+        <li>Din mein 2 baar — subah aur raat use karein</li>
+      </ul>
+      <h4 style="margin-top:1rem;">Key Ingredients</h4>
+      <ul>
+        <li>Glutathione — powerful whitening & antioxidant</li>
+        <li>Vitamin C — brightening & glow</li>
+        <li>Natural extracts — skin nourishment</li>
+      </ul>`
+  },
+  sr: {
+    name: 'Glutawol Whitening Serum',
+    category: 'Treatment',
+    price: 'Rs. 3,500',
+    cartPrice: 3500,
+    cartImg: 'glutawol serum.jpeg',
+    waText: 'Hi!%20I%20want%20to%20order%20Glutawol%20Serum%20Rs.3500',
+    imgs: ['glutawol serum.jpeg','glutawol serum side.jpeg','glutawol serum packaging.jpeg'],
+    features: ['Brighten','Hydrate','Repair','Glow'],
+    desc: `<h4>About This Product</h4>
+      <p style="margin-bottom:0.8rem;">Glutawol Whitening Serum Pakistan ka most powerful skin brightening treatment hai. Glutathione, Vitamin C aur Hyaluronic Acid ka combination aapki skin ko andar se transform karta hai.</p>
+      <h4 style="margin-top:1rem;">Key Benefits</h4>
+      <ul>
+        <li>Skin tone even karta hai — dark spots fade hote hain</li>
+        <li>Deep hydration — skin plump aur smooth rehti hai</li>
+        <li>Brightening effect — 4 hafte mein visible glow</li>
+        <li>Anti-aging — fine lines reduce hoti hain</li>
+        <li>Skin repair — damage cells restore hote hain</li>
+      </ul>
+      <h4 style="margin-top:1rem;">How to Use</h4>
+      <ul>
+        <li>Face wash ke baad clean skin pe apply karein</li>
+        <li>3-4 drops leke face aur neck pe lagaein</li>
+        <li>Gentle upward strokes se absorb karein</li>
+        <li>Raat ko sone se pehle use karein best results ke liye</li>
+        <li>Moisturizer se pehle apply karein</li>
+      </ul>
+      <h4 style="margin-top:1rem;">Key Ingredients</h4>
+      <ul>
+        <li>Glutathione — whitening & antioxidant protection</li>
+        <li>Vitamin C — collagen boost & brightening</li>
+        <li>Hyaluronic Acid — deep hydration & plumping</li>
+      </ul>`
+  },
+  cr: {
+    name: 'Glutawol Whitening Cream',
+    category: 'Moisturizer',
+    price: 'Rs. 1,200',
+    cartPrice: 1200,
+    cartImg: 'glutawol cream.jpeg',
+    waText: 'Hi!%20I%20want%20to%20order%20Glutawol%20Cream%20Rs.1200',
+    imgs: ['glutawol cream.jpeg','glutawol cream side.jpeg','glutawol cream packaging.jpeg'],
+    features: ['Brighten','Moisturize','Protect','Smooth'],
+    desc: `<h4>About This Product</h4>
+      <p style="margin-bottom:0.8rem;">Glutawol Whitening Cream ek luxurious daily moisturizer hai jo Glutathione ke saath skin ko nourish aur protect karta hai. Yeh cream skin ko soft, smooth aur radiant banata hai.</p>
+      <h4 style="margin-top:1rem;">Key Benefits</h4>
+      <ul>
+        <li>All-day moisturization — skin dry nahi hoti</li>
+        <li>Whitening formula — skin tone gradually bright hoti hai</li>
+        <li>UV protection — sun damage se bachata hai</li>
+        <li>Light texture — oily feel nahi hota</li>
+        <li>Suitable for all skin types — dry, oily, combination</li>
+      </ul>
+      <h4 style="margin-top:1rem;">How to Use</h4>
+      <ul>
+        <li>Face wash ke baad serum apply karein phir cream</li>
+        <li>Thodi si miqdar finger tips pe lein</li>
+        <li>Face, neck aur hands pe gentle massage karein</li>
+        <li>Subah aur raat — dono waqt use karein</li>
+        <li>Bahar jaane se 15 min pehle apply karein</li>
+      </ul>
+      <h4 style="margin-top:1rem;">Key Ingredients</h4>
+      <ul>
+        <li>Glutathione — whitening & skin protection</li>
+        <li>Natural moisturizers — deep hydration</li>
+        <li>Skin brightening agents — even skin tone</li>
+      </ul>`
+  },
+  sp: {
+    name: 'Glutawol Whitening Soap',
+    category: 'Cleanser',
+    price: 'Rs. 1,200',
+    cartPrice: 1200,
+    cartImg: 'glutawol soap.jpeg',
+    waText: 'Hi!%20I%20want%20to%20order%20Glutawol%20Soap%20Rs.1200',
+    imgs: ['glutawol soap.jpeg','glutawol soap side.jpeg','glutawol soap packaging.jpeg'],
+    features: ['Brightening','Nourishing','Gentle','Cleanse'],
+    desc: `<h4>About This Product</h4>
+      <p style="margin-bottom:0.8rem;">Glutawol Whitening Soap ek gentle cleansing bar hai jo Glutathione se enriched hai. Yeh body aur face dono ke liye use ho sakta hai aur skin ko naturally glow deta hai.</p>
+      <h4 style="margin-top:1rem;">Key Benefits</h4>
+      <ul>
+        <li>Full body whitening — face aur body dono ke liye</li>
+        <li>Gentle formula — skin ki natural moisture maintain karta hai</li>
+        <li>Brightening lather — har wash ke saath skin glows</li>
+        <li>Anti-bacterial — skin clean aur fresh rehti hai</li>
+        <li>Daily use safe — sensitive skin ke liye bhi suitable</li>
+      </ul>
+      <h4 style="margin-top:1rem;">How to Use</h4>
+      <ul>
+        <li>Skin ko pani se geela karein</li>
+        <li>Soap se lather banayein</li>
+        <li>Face ya body pe 1-2 minutes gentle massage karein</li>
+        <li>Achhi tarah dholen</li>
+        <li>Din mein 1-2 baar use karein</li>
+      </ul>
+      <h4 style="margin-top:1rem;">Key Ingredients</h4>
+      <ul>
+        <li>Glutathione — whitening & brightening</li>
+        <li>Natural oils — skin nourishment</li>
+        <li>Gentle cleansers — mild aur effective</li>
+      </ul>`
+  }
+};
+
+// PRODUCT MODAL
+function openProdModal(id) {
+  const p = products[id];
+  document.getElementById('modalCategory').textContent = p.category;
+  document.getElementById('modalName').textContent = p.name;
+  document.getElementById('modalPrice').textContent = p.price;
+  document.getElementById('modalMainImg').src = p.imgs[0];
+  document.getElementById('modalMainImg').alt = p.name;
+  document.getElementById('modalDesc').innerHTML = p.desc;
+  document.getElementById('modalFeatures').innerHTML = p.features.map(f=>`<span class="prod-modal-feature">${f}</span>`).join('');
+  document.getElementById('modalBtns').innerHTML = `
+    <button class="add-cart-btn" onclick="addToCart('${p.name}',${p.cartPrice},'${p.cartImg}');document.getElementById('prodModal').classList.remove('open');document.body.style.overflow=''">🛒 Add to Cart</button>
+    <a class="wa-order-btn" href="https://wa.me/923207895540?text=${p.waText}" target="_blank">💬 Order on WhatsApp</a>`;
+  const thumbs = document.getElementById('modalThumbs');
+  thumbs.innerHTML = p.imgs.map((img,i)=>`<img src="${img}" class="prod-modal-thumb${i===0?' active':''}" onclick="switchModalImg(this,'${img}')" alt="${p.name} view ${i+1}" loading="lazy">`).join('');
+  document.getElementById('prodModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function switchModalImg(thumb, src) {
+  document.getElementById('modalMainImg').src = src;
+  document.querySelectorAll('.prod-modal-thumb').forEach(t=>t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+function closeProdModal(e) {
+  if(e.target === document.getElementById('prodModal')) {
+    document.getElementById('prodModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
 // FAQ
 function toggleFaq(btn){
   const answer=btn.nextElementSibling;
@@ -1331,16 +1606,4 @@ const legalPages={
 function showLegal(type){
   event.preventDefault();
   document.getElementById('legalContent').innerHTML=legalPages[type];
-  document.getElementById('legalModal').style.display='block';
-  document.body.style.overflow='hidden';
-}
-function closeLegal(){
-  document.getElementById('legalModal').style.display='none';
-  document.body.style.overflow='';
-}
-document.getElementById('legalModal').addEventListener('click',function(e){
-  if(e.target===this) closeLegal();
-});
-</script>
-</body>
-</html>
+  document.
