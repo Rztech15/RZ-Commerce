@@ -195,9 +195,9 @@ section{padding:100px 6%;}
 .prod-badge{position:absolute;top:14px;left:14px;z-index:3;background:var(--grad-gold2);color:var(--black);font-size:0.62rem;font-weight:800;padding:5px 14px;letter-spacing:0.1em;text-transform:uppercase;}
 
 /* IMAGE SLIDER */
-.prod-slider{width:100%;height:300px;background:#e2ccaa;overflow:hidden;position:relative;border-bottom:1px solid var(--border);}
+.prod-slider{width:100%;height:300px;background:#e2ccaa !important;overflow:hidden;position:relative;border-bottom:1px solid var(--border);}
 .prod-slides{display:flex;height:100%;transition:transform 0.35s ease;will-change:transform;}
-.prod-slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#e2ccaa;}
+.prod-slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#e2ccaa !important;}
 .prod-slide img{width:100%;height:100%;object-fit:contain;padding:8px;}
 .slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:rgba(10,10,10,0.82);border:1px solid var(--gold);color:var(--gold);width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;transition:all 0.2s;opacity:1;}
 .slider-btn:hover{background:var(--gold);color:var(--black);}
@@ -1077,11 +1077,11 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 6
 
 <!-- SHIPPING INFO SECTION -->
 <section id="shipping" style="background:var(--black2);padding:60px 6%;">
-  <div class="sec-header reveal" style="margin-bottom:2rem;">
+  <div class="sec-header" style="margin-bottom:2rem;">
     <div class="sec-tag">Delivery Info</div>
     <h2 class="sec-title">Shipping & <span>Delivery</span></h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;" class="reveal">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;">
     <div style="background:var(--black3);border:1px solid var(--border);padding:2rem;text-align:center;">
       <div style="font-size:2rem;margin-bottom:0.8rem;">🚚</div>
       <h3 style="font-family:'Playfair Display',serif;color:var(--white);margin-bottom:0.5rem;font-size:1rem;">Nationwide Delivery</h3>
@@ -1606,4 +1606,4 @@ const legalPages={
 function showLegal(type){
   event.preventDefault();
   document.getElementById('legalContent').innerHTML=legalPages[type];
-  documen. 
+  document.
