@@ -54,7 +54,8 @@ nav {
 .nav-links { display: flex; gap: 2rem; }
 .nav-links a { color: var(--text); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--gold); }
-.cart-btn { background: var(--gold); color: var(--black); padding: 8px 16px; border-radius: 50px; font-weight: 700; cursor: pointer; border: none; font-size: 0.8rem; position: relative; }
+.cart-btn { background: #FFD700; color: #000; padding: 10px 18px; border-radius: 50px; font-weight: 900; cursor: pointer; border: 2px solid #FFD700; font-size: 0.85rem; position: relative; transition: all 0.2s; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4); }
+.cart-btn:hover { background: #FFC700; box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6); transform: scale(1.05); }
 .cart-count { position: absolute; top: -8px; right: -8px; background: #e74c3c; color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 800; }
 
 /* LIVE TICKER */
@@ -103,7 +104,8 @@ section { padding: 80px 5%; margin-top: 0; }
 .prod-subtitle { font-size: 0.8rem; color: var(--gray); margin-bottom: 1rem; }
 .prod-price { font-size: 1.5rem; font-weight: 900; color: var(--gold); margin-bottom: 1rem; }
 .prod-buttons { display: flex; flex-direction: column; gap: 0.6rem; }
-.btn-cart { background: var(--gold); color: var(--black); border: none; padding: 10px; font-weight: 700; cursor: pointer; border-radius: 4px; font-size: 0.8rem; transition: opacity 0.2s; }
+.btn-cart { background: #FFD700; color: #000; border: none; padding: 12px; font-weight: 900; cursor: pointer; border-radius: 6px; font-size: 0.85rem; transition: all 0.2s; box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); text-transform: uppercase; letter-spacing: 0.05em; }
+.btn-cart:hover { background: #FFC700; box-shadow: 0 6px 14px rgba(255, 215, 0, 0.5); transform: translateY(-2px); }
 .btn-cart:hover { opacity: 0.85; }
 .btn-details { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 10px; font-weight: 700; cursor: pointer; border-radius: 4px; font-size: 0.8rem; transition: all 0.2s; }
 .btn-details:hover { background: var(--gold); color: var(--black); }
@@ -293,8 +295,86 @@ footer { background: var(--black3); border-top: 1px solid var(--border); padding
   </div>
 </section>
 
+<!-- TRUST BADGES -->
+<section style="background: linear-gradient(135deg, #FFD700, #FFC700); padding: 40px 5%; color: #000;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: center;">
+    <div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✓</div>
+      <h4 style="font-size: 1rem; margin-bottom: 0.3rem; font-weight: 800;">100% Authentic</h4>
+      <p style="font-size: 0.85rem;">Verified Glutawol Products</p>
+    </div>
+    <div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🚚</div>
+      <h4 style="font-size: 1rem; margin-bottom: 0.3rem; font-weight: 800;">Fast Delivery</h4>
+      <p style="font-size: 0.85rem;">2-3 Days Nationwide</p>
+    </div>
+    <div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💵</div>
+      <h4 style="font-size: 1rem; margin-bottom: 0.3rem; font-weight: 800;">Cash on Delivery</h4>
+      <p style="font-size: 0.85rem;">Pay Upon Delivery</p>
+    </div>
+    <div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">↩️</div>
+      <h4 style="font-size: 1rem; margin-bottom: 0.3rem; font-weight: 800;">Easy Returns</h4>
+      <p style="font-size: 0.85rem;">7-Day Return Policy</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT & DELIVERY INFO -->
+<section style="background: var(--black2); padding: 60px 5%;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+      <div>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--gold);">Payment Methods</h3>
+        <div style="background: var(--black3); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
+          <p style="margin-bottom: 1rem;"><strong style="color: var(--gold);">💵 Cash on Delivery (COD)</strong><br><span style="color: var(--gray); font-size: 0.9rem;">Receive product first, pay later. Available nationwide.</span></p>
+          <p style="margin-bottom: 1rem;"><strong style="color: var(--gold);">🏦 Bank Transfer</strong><br><span style="color: var(--gray); font-size: 0.9rem;">Direct transfer to our account. 10% discount on orders.</span></p>
+          <p><strong style="color: var(--gold);">📱 EasyPaisa / JazzCash</strong><br><span style="color: var(--gray); font-size: 0.9rem;">Mobile wallet payment. Instant confirmation.</span></p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--gold);">Delivery Coverage</h3>
+        <div style="background: var(--black3); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
+          <p style="margin-bottom: 1rem;"><strong style="color: var(--gold);">📍 Nationwide Delivery</strong><br><span style="color: var(--gray); font-size: 0.9rem;">We deliver to all major cities and towns in Pakistan.</span></p>
+          <p style="margin-bottom: 1rem;"><strong style="color: var(--gold);">🚚 Delivery Time</strong><br><span style="color: var(--gray); font-size: 0.9rem;">2-3 business days after order confirmation.</span></p>
+          <p><strong style="color: var(--gold);">✓ Free Delivery</strong><br><span style="color: var(--gray); font-size: 0.9rem;">Orders Rs. 10,000+ get FREE delivery anywhere in Pakistan!</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<!-- FEATURED PRODUCTS -->
+<section id="featured" style="background: var(--black); padding: 80px 5%;">
+  <div class="sec-header" style="text-align: center;">
+    <div class="sec-tag">Top Sellers</div>
+    <h2 class="sec-title" style="text-align: center;">Our <span>Best Sellers</span></h2>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+    <div style="text-align: center; padding: 1.2rem; background: var(--black3); border-radius: 8px; border: 2px solid var(--gold);">
+      <h4 style="color: var(--gold); margin-bottom: 0.5rem;">Glutawol Serum</h4>
+      <p style="color: var(--gold); font-size: 1.3rem; font-weight: 900; margin-bottom: 0.5rem;">Rs. 3,500</p>
+      <p style="color: #27ae60; font-size: 0.8rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐ (200+)</p>
+      <button class="btn-cart" onclick="addToCart('Glutawol Serum', 3500, 'glutawol serum.jpeg')">Add to Cart</button>
+    </div>
+    <div style="text-align: center; padding: 1.2rem; background: var(--black3); border-radius: 8px; border: 2px solid var(--gold);">
+      <h4 style="color: var(--gold); margin-bottom: 0.5rem;">Complete Bundle</h4>
+      <p style="color: var(--gold); font-size: 1.3rem; font-weight: 900; margin-bottom: 0.5rem;">Rs. 6,700</p>
+      <p style="color: #27ae60; font-size: 0.8rem; margin-bottom: 1rem;">Save Rs. 700</p>
+      <button class="btn-cart" onclick="addToCart('Glutawol Bundle Pack', 6700, 'glutawol skincare bundle.jpeg')">Add Bundle</button>
+    </div>
+    <div style="text-align: center; padding: 1.2rem; background: var(--black3); border-radius: 8px; border: 2px solid var(--gold);">
+      <h4 style="color: var(--gold); margin-bottom: 0.5rem;">Face Wash</h4>
+      <p style="color: var(--gold); font-size: 1.3rem; font-weight: 900; margin-bottom: 0.5rem;">Rs. 1,500</p>
+      <p style="color: #27ae60; font-size: 0.8rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐ (180+)</p>
+      <button class="btn-cart" onclick="addToCart('Glutawol Face Wash', 1500, 'glutawol facewash.jpeg')">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
 <!-- PRODUCTS -->
-<section id="products">
   <div class="sec-header">
     <div class="sec-tag">Our Collection</div>
     <h2 class="sec-title">Glutawol <span>Products</span></h2>
@@ -647,6 +727,14 @@ footer { background: var(--black3); border-top: 1px solid var(--border); padding
   </div>
 </section>
 
+<!-- POLICY PAGES (Hidden by default, shown via modal) -->
+<div id="policy-modal" class="modal">
+  <div class="modal-content" style="max-width: 700px; max-height: 80vh; overflow-y: auto;">
+    <button class="modal-close" onclick="closePolicy()">✕</button>
+    <div id="policy-content" style="padding: 2rem;"></div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -673,10 +761,10 @@ footer { background: var(--black3); border-top: 1px solid var(--border); padding
     </div>
     <div class="footer-col">
       <h4>Policies</h4>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Return & Refund</a>
-      <a href="#">Shipping Policy</a>
-      <a href="#">Terms of Service</a>
+      <a href="#" onclick="showPolicy('privacy')">Privacy Policy</a>
+      <a href="#" onclick="showPolicy('refund')">Return & Refund</a>
+      <a href="#" onclick="showPolicy('shipping')">Shipping Policy</a>
+      <a href="#" onclick="showPolicy('terms')">Terms of Service</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1089,13 +1177,108 @@ function likeReview(btn) {
   btn.textContent = '👍 Helpful (' + likes + ')';
 }
 
-// ORDER FORM
+// ORDER FORM - WITH EMAIL
 function submitOrder(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const message = `New Order Inquiry:\nName: ${formData.get('name')}\nPhone: ${formData.get('phone')}\nCity: ${formData.get('city')}\nAddress: ${formData.get('address')}\nProduct: ${formData.get('product')}`;
+  const name = formData.get('name');
+  const phone = formData.get('phone');
+  const city = formData.get('city');
+  const address = formData.get('address');
+  const product = formData.get('product');
+  
+  const message = `New Order Inquiry from ${name}\n\nPhone: ${phone}\nCity: ${city}\nAddress: ${address}\nProduct: ${product}`;
+  
+  // Send to WhatsApp
   window.open(`https://wa.me/923207895540?text=${encodeURIComponent(message)}`, '_blank');
-  e.target.reset();
+  
+  // Also send to email via Formspree
+  fetch('https://formspree.io/f/mlgyrvov', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: name,
+      phone: phone,
+      city: city,
+      address: address,
+      product: product,
+      email: 'ramzanbalochmrbaloch@gmail.com'
+    })
+  }).then(() => {
+    alert('Order sent! We will contact you shortly on WhatsApp.');
+    e.target.reset();
+  }).catch(err => console.log('Email sent to WhatsApp'));
+}
+
+// POLICY MODALS
+const policies = {
+  privacy: `
+    <h2 style="color: var(--gold); margin-bottom: 1.5rem;">Privacy Policy</h2>
+    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 1rem;"><strong>Last Updated: June 2026</strong></p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Information We Collect</h4>
+    <p style="color: var(--gray); line-height: 1.8;">When you place an order, we collect your name, phone number, email, and delivery address. This information is used only to process and deliver your order.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">How We Use Your Information</h4>
+    <p style="color: var(--gray); line-height: 1.8;">Your data is used solely for order fulfillment, customer support, and delivery updates. We do not sell or share your personal information with third parties.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Data Security</h4>
+    <p style="color: var(--gray); line-height: 1.8;">We take data security seriously and implement standard security measures to protect your information.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Contact Us</h4>
+    <p style="color: var(--gray); line-height: 1.8;">For privacy concerns, email us at ramzanbalochmrbaloch@gmail.com</p>
+  `,
+  refund: `
+    <h2 style="color: var(--gold); margin-bottom: 1.5rem;">Return & Refund Policy</h2>
+    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 1rem;"><strong>Last Updated: June 2026</strong></p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Return Window</h4>
+    <p style="color: var(--gray); line-height: 1.8;">We accept returns within 7 days of delivery if the product is damaged, defective, or incorrect.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Return Conditions</h4>
+    <ul style="color: var(--gray); line-height: 1.8; padding-left: 1.5rem;">
+      <li>Product must be unused in original packaging</li>
+      <li>Include proof of purchase (order screenshot)</li>
+      <li>Contact us via WhatsApp: 0320-7895540</li>
+    </ul>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Refund Process</h4>
+    <p style="color: var(--gray); line-height: 1.8;">Once we verify the return, refund will be processed within 5-7 business days via EasyPaisa, JazzCash, or bank transfer.</p>
+  `,
+  shipping: `
+    <h2 style="color: var(--gold); margin-bottom: 1.5rem;">Shipping Policy</h2>
+    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 1rem;"><strong>Last Updated: June 2026</strong></p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Delivery Coverage</h4>
+    <p style="color: var(--gray); line-height: 1.8;">We deliver to all major cities and towns across Pakistan.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Delivery Time</h4>
+    <p style="color: var(--gray); line-height: 1.8;">Orders are delivered within 2-3 business days after confirmation. You will receive updates via WhatsApp.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Shipping Charges</h4>
+    <ul style="color: var(--gray); line-height: 1.8; padding-left: 1.5rem;">
+      <li>Multan: Rs. 150</li>
+      <li>Lahore, Karachi, Islamabad: Rs. 200</li>
+      <li>Other Cities: Rs. 250</li>
+      <li><strong style="color: var(--gold);">FREE on orders Rs. 10,000+</strong></li>
+    </ul>
+  `,
+  terms: `
+    <h2 style="color: var(--gold); margin-bottom: 1.5rem;">Terms of Service</h2>
+    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 1rem;"><strong>Last Updated: June 2026</strong></p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Product Authenticity</h4>
+    <p style="color: var(--gray); line-height: 1.8;">All products sold by RZ Commerce are 100% authentic Glutawol products from verified suppliers.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Order Confirmation</h4>
+    <p style="color: var(--gray); line-height: 1.8;">Orders are confirmed via WhatsApp. Please ensure your contact details are correct.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Pricing</h4>
+    <p style="color: var(--gray); line-height: 1.8;">All prices are in Pakistani Rupees (PKR) and subject to change without notice.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Liability</h4>
+    <p style="color: var(--gray); line-height: 1.8;">Products are for external use only. Results may vary. Always read instructions before use.</p>
+    <h4 style="color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem;">Contact</h4>
+    <p style="color: var(--gray); line-height: 1.8;">WhatsApp: 0320-7895540 | Email: ramzanbalochmrbaloch@gmail.com</p>
+  `
+};
+
+function showPolicy(type) {
+  event.preventDefault();
+  document.getElementById('policy-content').innerHTML = policies[type];
+  document.getElementById('policy-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePolicy() {
+  document.getElementById('policy-modal').classList.remove('open');
+  document.body.style.overflow = '';
 }
 </script>
 </body>
